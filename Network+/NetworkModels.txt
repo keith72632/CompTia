@@ -1,0 +1,28 @@
+Network Models
+
+Two networks models:
+	OSI7 layer model and TCP/IP model
+OSI7:
+    The OSI & layer model is 7 distinct functions a network must do.
+    The 7 layers are:
+    	1)Physical Layer: cabels
+	2)Data Link layer: Basically everything that works at a MAC address layer. Network cards, switches etc
+	3)Network Layer: Logical addresses like IP address, which involves routers
+	4)Tranpsort Layer: This is the assembly/disassembyl layer where data is broken down into packets an dpackets are delivered
+	5)Session Layer: The actual layer between two systems. TCP, communication between client and server, etc
+	6)Presentation Layer: Organizes data into a format that apps can read
+	7)Application Layer: Logic within the applications that make them network aware. Refered to as APIs
+TCP/IP:
+    Simpler than the OSI. Involves 4 layers
+    The 4 layers are:
+        1)Network Interface layer(link): all the physical cables, anything to do with MAC address.(Basically covers what the OSI7 covers in layer one and two
+	2)Internet Layer: Routers or anything else to do with IP addresses
+	3)Transport layer: Handles the assemebly and disassembly, along with tranportation of this data
+	4)Application Layer: OSI Application, presentation and session layer
+Steps:
+    Network card takes ethernet frame and checks the frame check sequences for a correct MAC address. Strips MAC address and stores it
+    The remainder is called an IP packet. Packet passed to next layer. Network layer and internet layer. Checks for correct ip address. Strips ip addr and strs
+    whats left is called TCP segment. This is passed into and through the Transport layer. 
+    The Transport layer handles the assembly and disassembly of data, using the Sequencing Number. Sequencing number is stripped, leaving the data and port#s
+    Transport layer passed data and port numbers to top of stack, which is Session, Presentation and Application(OSI7) and Application for(TCP/IP)
+
