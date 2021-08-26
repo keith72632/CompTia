@@ -1,0 +1,11 @@
+Basics of Network Frames
+
+Network Interfacing Card (NIC)
+	A NIC is plugged into pc which is connected to a network switch.
+How is Data sent over a network cable?
+	Sent in binary form. Data is sent in frames, or sometimes refered to as packets. Packetized data. 
+How are frames formatted?
+	A frame can be up to 1500 bytes long, with a descrete beginning and end. Frames are generated inside Network card, then 
+sends through network. 
+
+

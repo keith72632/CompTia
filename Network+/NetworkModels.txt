@@ -24,5 +24,14 @@ Steps:
     The remainder is called an IP packet. Packet passed to next layer. Network layer and internet layer. Checks for correct ip address. Strips ip addr and strs
     whats left is called TCP segment. This is passed into and through the Transport layer. 
     The Transport layer handles the assembly and disassembly of data, using the Sequencing Number. Sequencing number is stripped, leaving the data and port#s
-    Transport layer passed data and port numbers to top of stack, which is Session, Presentation and Application(OSI7) and Application for(TCP/IP)
+    Transport layer passed data and port numbers to top of stack, which is Session, Presentation and Application(OSI7) and Application for(TCP/IP). Sessions connect servers and clients. Session is in App layer in TCP/IP. OSI sessions are not necessarily network aware.
+	OSI Presentation layer organizes data for the App layer, which is depricated. Application layer is the built in logic that let
+them interacter with a user. Sockets are organized here. 
+
+Steps for created an ethernet frame for outgoing:
+	1) Recieve data from Application layer. Organize port numbers here.
+	2) Transport Layer organzies data and adds sequencing numbers to create ip packets(tcp segment)
+	3) Network layer(internet layer) adds ip addr for ip packet
+	4) Network interface [link] add MAC address and run frame check sequence. Packet completed and sent
+
 

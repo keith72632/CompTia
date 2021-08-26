@@ -1,0 +1,12 @@
+MAC (media access control) Address basics
+
+A Repeater is the hub in which all devices on a network send data. A network switch is a hub. The hub will take data from one machine,
+make copies and send these copies to the other machines connected to hub. Every machine gets a copy, but can't access data unless the
+correct MAC address is among the frame.
+
+MAC addresses are 48 bits and is represented in hexadecimal. Each character represents 4 binary characters. The first three values in
+mac addr is the OEM or Original Equipment Manufacturer. Issued to specific NIC manufactrer. The last 6 values represent the specific 
+card itself and is refered to as the Unique ID. Every card in existence has unique MAC address. 
+
+Every ethernet frame needs a MAC address for machine data is sent to and sent from. A frame will also need a CRC(cyclic redundancy
+check) which verifies if the data is good. Frame layout is, respectivly, Mac addr sender and receiver, data, the CRC.
