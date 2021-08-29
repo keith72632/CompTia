@@ -1,0 +1,16 @@
+Cables and Topology
+
+Bus Topology
+    All hosts are connected to single cable called a "Bus". Mostly obsolete. 
+
+Ring Topology
+    COnsists of single ring of cabling with no ends. Invented by IBM with Token Ring.
+
+Star Topology
+    EVery host connected to block in the middle, in a star formation. Doesn't reliably propogate data
+
+Hybrid Topology
+    Most famous is the Star-Bus. Has hub or a switch in the middle. 
+
+Physical vs logical topology
+    Self explanitory?
