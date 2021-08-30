@@ -14,3 +14,86 @@ Hybrid Topology
 
 Physical vs logical topology
     Self explanitory?
+
+Cablings
+
+1) Twisted Pair Cabling
+    Consists of pairs of whiles twisted together and is designed to let signals travel farther. Modern twisted
+cabling has 4 pairs of twisted wires. Don't run around anything high heat or highly magnetic. Dirt cheap. Can 
+have any number of pairs of cabling. Pretty much exclusively 4 pairs. Ends are called RJ-45 connector. Two standars:
+E1A/T1A and the 568A/568B. 568A matches solid colored wire with twisted color wire of the same color. The 568B has
+the following order: brown, brown white, solid green, blue white, solid blue, green white, solid orange and orange
+white. 568A has corresponding white stiped next to solid color. Solid copper wire inside.
+
+2) Shielded twisted pair
+    STP(shielded twisted pair). This can be used next to euipment that genereated heat and noise. 
+
+Notes:
+    Modern twisted pair has 4 or more pairs. UTP(Unshielded Twisted Pair)  cable is unshielded and subject to signal interferance while
+STP(Shielded twisted pair)  is not.
+    568A and 568b are wiring standards for how the wires are connected to a connector
+
+Cat Ratings
+    Categories, or Cat ratings, rate the speed at which signals are propogating. Cat1 is really only used for 
+telephone. Different numbers of twists per inch. has kevlar inside for rigidity. Cat7 has each twist shielded.
+Oldest is Cat 3(10mbps networks). Cat 5 is (100 mbps) and can run 100 meters. Cat 5 has mistakes and was replaced 
+with Cat 5e. Cat 6 (1Gbps) for 100 meters was used until 10 Gbps came along, which cat 5 can only tansfer for 55 
+meters. Cat 6a was invented to fix this problem which can run 10Gbs for 100 meter. Cat 7 (10 Gbps at 100 meters).
+RJ-45 connectors were depricated for Cat 7. Cat 7 is not really a true standard YET.
+
+Cat Reviews:
+*UTP cat ratings define the speed and cable length specs
+*Cat ratings have a different number of twists per inch
+*Cat 6a and Cat 7 are both rated for 10 Gbs speeds and 100 meter cable length. 
+
+******************************************************************************************************
+
+Fiber Optic Cabling
+    Has fiber optic core which carried light, a cladding that shields the light and the cable jacket which protects
+everything. Two types of fiber optic: multimode and single-mode. Multimode is designed to propogate light(carries
+led signals), and single mode which has a thinner fiber optic, desgined to go really far. Multimode has two connectors.
+Multi is usually orange and single is yellow. Duplex fiber cables have two connectors. 
+
+*Multi mode uses led and single mode uses lasers
+
+Types of connectors:
+    1) ST connector. Earliest type of connectors. Push and twist in place
+    2) SC connector. Square, push to connect
+    3) FC connector. Screws into place
+    4) LC connector. smaller square housing and clip into place
+    5) MT-RJ conector. Can't see the two cables, but are there. clip into place
+When fiber is cut, the end needs to be polished. 3 Types of polishing are:
+    1) Pc: Square polish
+    2) UPC: Rounder polish for less light loss
+    3) APC: Angled cut. Doesn't work as well but easier to make 
+
+*********************************************************************************************************
+
+Fire Ratings
+    3 Fire ratings:
+    1) Plenum-rated. Plenum is the space between drop ceiling and ceiling. This is where the ac air is recurculated
+    2) Riser-rated. Designed to run between floors in building. Less fire-retardent. 
+    3) PVC or non-plenum rated. no fire protection at all. 
+    More expensive to less exepnsive, respectively. 
+
+**********************************************************************************************************
+
+Legacy Network Connections
+    Older technologies that aren't implimented anymore. Two types or network connections are serial ports and parralell
+ports
+Serial Ports:
+    low speed two way ports. Used for old networking. use language called RS-232, manifested as DB-9 and DB-25.
+Connector is shaped like a D and has the amount of pins numbered in the name. DB-25 is usually adapted to DB-9
+
+Parralled Port:
+    Parrelel ports are femaled and used for things like printers. PPrimitave bus-type connection.
+ IEEE organizes network standards. In Feb 1980, network cabling was standarized in 802 commitees. 802 consistes or
+ networking standards. 
+
+ Higher end routers have a blue console port, which a rollover/yost cable is connected to. plug for router looks
+ like etehrnet, and other end looks like DB-9. Plug DB-9 into computer to program intial configuation. 
+
+ Review:
+    DB-9 and DB-25 are legacy serial netwokring connections. 
+    Parallel ports were typically used for printers
+    A yost or rollover cable is a serial cable used to configure a router or switch
