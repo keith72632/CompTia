@@ -1,0 +1,45 @@
+All Quiz Questions and Answers
+
+Section 2:
+    1) Which Best Desribes a Model?
+    	*A representation of a real object or process
+    2) The OSI model has_ Layers and the TCP/IP has _ layers?
+        *7 and 4 
+    3) The internet layer of the TCP model corresponds to which layer(s) of the OSI model?
+        *Network
+    4) What is the chunk of data the NIC sends out called?
+        *frame
+    5) Where does a computer get its MAC address?
+        *It is built into the Network Interface Card (NIC) by manufacturer
+    6) Which Protocol is connectionless?
+        *UDP
+**************************************************************************************************************
+
+Section 3:
+    1) Which of the following is not a type of network typology?
+        *Mesh bus. Bus/linear bus, Ring, Star, Star bus and Mesh are all valid typologies
+    2) An organization is building out it's offices. Intially, computer connections will be 1 gigabit Ethernet but the company
+       wants to upgrade to 10 gigabit connections in the near future. What category of wirin gshould be installed?
+       *Cat 6A
+    3) Which type of fiber optic cable supports longer run lengths?
+       *Single-mode
+    4) Which of the following is not a fire rating for network cables?
+       *Cat 6A. Plenum, Riser and PVC are all fire ratings
+    5)Which of the following is not a charateristic of serial ports?
+        *sends out 8 Bits at the same time on different pins. Uses RS-232 signalling, Uses DB-9 and DB-25 connector are all related
+	the serial ports
+*****************************************************************************************************************
+
+Section 4:
+    1) Which committee governs the standards of the Ethernet?
+        *IEEE 802.3
+    2) Which is not found in an ethernet frame?
+	*Destination IP. Source MAC, Ethertype and Destination MAC are all included in ethernet frame
+    3) Which statment is not true about earlu Ethernet?
+        *10Base5 connects to newtwork i cardwith BNC-T connctor. Answers: Thick etherent coax is called 10Base5, Thick ethernet
+	msut be terminated on both end of coaxial cabel, and thin ethernet is called 10Base2 are all correct
+    4)Which statment is not true about 10BaseT?
+        *Requires Cat 5A. it actually requires Cat 3. 10BaseT runs 10 mbps, with distance of 100 meters and supports 1024 nodes
+    5) Which of the follwoing is he UTP wiring standard?
+        *TIA 568B
+
