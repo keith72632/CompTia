@@ -1,0 +1,99 @@
+Ethernet Stuff
+
+    Ethernet is defined according to IEEE 802.3. Updated periodically. Ethernet is really defined by it's frame,
+which consists of MAC address, ip packet, data, and CRC(FCS frame check sequence). Never more than 1500 bytes. Backwards
+compatibilty is easy, just slow down speeds. Different ethernet nomenclature includes:
+    10Base5:
+        10 represents speed in mbps
+        Middle value is always either base or broad(Broadcast). Base means only one "channel"
+        Last value represents the length of the cable. 5 = 500 meters. Most modern ether is T, which is 10mbps
+
+************************************************************************************************************
+
+Ethernet Frame, left to right:
+1) Preamble: lets network card know there is an incoming frame
+2) Dest MAC Addr: 48 bit MAC addr
+3) Src MAC Addr: 48 bit MAC addr
+4) Data Type: also refered to as Ether type. 2 bytes longs. Infrorms NIC of data type
+5) Data: byte = octet = 8 bits. min amount of data is 64 bytes(ping). Needs to be padded if data is less than min
+    max 1522 bytes. If data larger than 1522 needs to be sent, then send multiple frames, with sequencing numbers
+    to identify.
+**Jumbo frames can haul 9000 bytes
+***Max number of bytes hauled in refered to as Maximum Transmission Unit(MTU)
+6)Frame Check Sequence(FCS) 32 bit cyclic redundancy check. Works as a check sum
+
+Review
+*Ethernet Frame = preamble->dest mac->src mac->data type->data->pad(?)->FCS
+*Jumbo frame can carry 9000 bytes
+*FCS is used for error detection
+
+
+*************************************************************************************************************
+
+Early Ethernet
+
+    Modern ethernet has some sort of switch, while old ether would be tapped into with a vampire connector(BUS)(Drops).
+Segmented ethernet is just one continuous cable without a switch. CSMA/CD stands for Carrier Sense Multiple Access/
+Collision Detection. Computers on a bus like this can only talk one at a time. Computer will send frame both ways on bus.
+SIgnals hitting the end is called refelction, so something called a Terminating resistor is installed to prevent this
+reflection. When two computers talk at the same time, both pcs pick a random number to see who goes first. 
+
+    10Base2 is a simpler 10Base5, designed for shorter distances. Connector called BNC connector attached to network
+card, fed through a T with a terminating reciever on end of T. 
+
+Review:
+*CSMA/CD stands for carrier sense multiple access/collison detection
+*10Base5 and 10Base2 require terminating resistors at both ends of segment(cable)
+*WHen connecting to 10Base2, always use a T connector,
+
+
+******************************************************************************************************************
+
+10BaseT
+
+    Token ring ethernet didn't use a bus, but a box called a MSAU(Multistation access unit) was used. In this system, if anyone 
+of the connections broke, interent didn't go down as with the older bus style. Made by IBM. Expensive, dollars per foot. 10BaseT uses
+twisted wire. 10BaseT runs at 10 mbps and 100 meters, with no more than 1024 nodes, and run on Cat 3 cables or better
+
+review:
+*10BaseT runs at 10 Mbps over cat 3 or better. 
+*10BaseT can have u to 1024 nodes
+*10BseT runs over 100 meters
+
+********************************************************************************************************************
+
+Terminating Twisted Pairs
+
+    Built into motherboards are RJ-45 connectors. Cable is run from RJ-45 on motherboard to network switch. Twiosted pair cable with 
+RJ-45 ends on it is called a terminated cable. When making cable, crimping a cable is terminating cable. TO make a connection, cut 
+of jacket from cable. Untwist wires. In the case of 568A (solid colors correspond with white twisted cable), order starts with white
+twisted green. Slide straighten cables into pre-guide. Green->blue->orange->brown. Ends of each cable shoved into metal slots. Straight-
+thru cables are the most common, which is terminated on each end. There are situations where a Crossover Cable is needed, which is where
+to wires are used to transmit, and two to revieve(full duplex). One end can be 568A and the other end 568B. Crossover cables are usually
+used to make a two computer network. An RJ-45 connector's official term is an 8P8C connector. 
+
+Review
+*An RJ-45 (a.k.a 8P8C) connector is used to connect most network cable
+*Watch the postion of the wire when crimping to follow 568A or 568B standards
+*Straight-through cables are the most commonly used cable in network.
+
+**********************************************************************************************************************
+
+Hubs and Switches
+
+    The difference between a hub and a switch is: Hub is a multip-port repeater. Hub sends frame and makes multiple copies. This is a 
+repeater, not an amplifier. Makes frame for every machine on network. Downside to a hub is its maximum bandwith is 10BaseT. Each
+conversation is divded between machine, which means bandwitch degrades with each talking machine. with hub, Carrier Sense Mutiple
+Acces/Collision Detection(CSMA/CD) is used. CSMA/CD is used to mitigate between multiple talking machines. A collison is when mutlitple
+machines talk at the same time. Each network card has a set of dice to decide randomly wich machine gets to talk. This di decides how 
+many milliseconds to wait. Collison Domain is a term to describe newtork of machines that can hear collisions bewteen machines.
+    Switches check MAC address in frames and memorizes these MAC addresses into MAC Table. Updated when new machines are connected.
+This methods allows propogation of data without making copy for every machine on Newtork, and allows for consistent speeds with degradation
+based on the number of machines connected as with a hub. A Broadcast sends data to every machine on network and has a specfic destination
+MAC address of all F's. This is known as a Broadcast domain. Collison Domain = Hubs, Broadcast Domains = switches. The few instances where
+hubs are perfered is where listening to all traffic is required. Switched can take over a lot of the functionality of a hub. 
+
+Review
+*Switched forward frames based on MAC addrs
+*Hubs use CSMA/CD to avoid collisons
+*Switched create and use MAC address tables to map port and host devices. 
