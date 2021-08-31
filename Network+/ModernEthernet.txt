@@ -1,0 +1,56 @@
+Modern Ethernet
+*********************************************************************************
+
+    100BaseT is 100 megabit ethernet came out while hubs were still popular. Hubs have to use 10mbps EVERYTHING, Cards included.
+Half-duplex etherent is one way, full-duplex goes both ways. 
+
+Different standards for 100BaseT include:
+    1)100BaseT4: 100mbps 1024 nodes 100m cat3. First ethernet to use all four pairs of UTS cabling
+    2)100BaseTX: 100mbps 1024 nodes, 100 m cat 5e, two pairs of wires
+    *100BaseT4 is gone, and 100BaseTX is now just called 100BaseT
+    3)100BaseFX: 100mbs, 1024 nodes, multimode fiber at 2 km length.
+Review:
+    *Full-duplex allows for both machines talk at the same time
+    *100BaseT(100BaseTX) runs at 100 Mbps up to 100 meters
+    *100BaseFX, a fiber solution runs at 100 mbs and up to 2 kilometers in length
+
+*****************************************************************************************
+
+Connecting Switches
+
+    It makes more sense to expand network by adding another switch. Connected with patch cables. A regular patch cable is the same 
+on both ends(568a to 568a or 568b to 568b), or a crossover cable where the ends switch(recvs go to sends and sends go to recvs). 
+Connecting with crossover cables is as simple as plugging in on RJ-45 on the front of a switch to another. 
+    Switched have an uplink port, which has crossover built in. This allows the use of a straight through cable. Some swithes will
+have button on fron to switch port from uplink to normal port. 
+    Most modern switched have auto-sensing ports. The cable type does'nt matter with these modern switched.
+
+Review:
+    *Straight through cables have identical ends
+    *Crossover cables have opposite ends (568a to 568b)
+    *Connect switched directly with crossover cables
+***************************************************************************************************
+
+Gigabit and 10-Gigabit Ethernet
+
+    Gigabit = 100 Megabits. 4 Gigabit standards:
+        1) 1000BaseCX: Uses twinax coaxial cables at a distance of 25 meters
+        2) 1000BaseSX: multimode cable 500m distance
+        3) 1000BaseLX: single mode 5 kilometer
+        4) 1000BaseT: Cat 6 100 meters
+    10 Gigabit ethernet has two types, ethernet and sonet:
+        1) 10GBaseT: Cat 6 or Cat 6a, distances of 55 meters and 100 meters respectively.
+        2) 10GBaseSR: multimode 26m - 400 m
+        3) 10GBaseLR: long range, single mode 1310nanometer fiber
+        4) 10GBaseER: 1550 nanometer fiber and 40 kilometers
+        *Each one of these standards have a SW, EW and LW counterpart
+
+1000BaseCX:   Twinas      25 meters
+Fiber-Optic:  1000BaseSX   Multimode    500 meters
+              1000BaseLX   Singlemode   5 Kilometers
+UTP:          1000BaseT    Cat 6        100 meters
+10GBaseT                   Cat          100 meters
+                           Cat 6a       100 meters
+10GBaseSR                  Multimode    26-400 meters
+10GBaseLR                  Singlemode   10 Kilometers      1310 nm cable
+10GBaseER                  Singlemode   40 Kilometers      1550 nm cable  
