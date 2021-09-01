@@ -42,4 +42,18 @@ Section 4:
         *Requires Cat 5A. it actually requires Cat 3. 10BaseT runs 10 mbps, with distance of 100 meters and supports 1024 nodes
     5) Which of the follwoing is he UTP wiring standard?
         *TIA 568B
+*******************************************************************************************************************
 
+Section 5:
+    1) Which statemnt is not true of 100 megabit Ethernet?
+        *100BaseTX supports runs of up to 2KM. Both 100BaeT and 100BaseTX(same) run over UTP, Both 100BaeF and 100BaseFX run over 
+        multi-mode cabel and Ethernet can run at 100mbps on fiber or copper
+    2)Why can straight-through cables be used to connect modern switches together?
+        *Auto-sensing in the switch will cause the switch port to re-wire itself into a crossover configuartion
+    3) WHich of the following is not true of Gigabit Ethernet?
+        *1000BaseSX supports between 100 m and 10km and can be used with multi-mode or single-mode fiber is false. it acutall supports
+        runs of 500m over multimode. True =  1000BaseT supports up to 100 meter runs over UTP, 1000BaeLX supports between 100m 
+        and 5km and can be used with multi-mode or single-mode fiber, and
+    4) WHich of the following is not a common network problem?
+        *COnnecting switches in a tree structure is common therefore not a problem. Loops, replay attacks and vector inits are all problem
+        1000BaseLX supports runs of 100m over mutlimode fiber

@@ -33,7 +33,7 @@ Review:
 
 Gigabit and 10-Gigabit Ethernet
 
-    Gigabit = 100 Megabits. 4 Gigabit standards:
+    Gigabit = 1000 Megabits. 4 Gigabit standards:
         1) 1000BaseCX: Uses twinax coaxial cables at a distance of 25 meters
         2) 1000BaseSX: multimode cable 500m distance
         3) 1000BaseLX: single mode 5 kilometer
@@ -54,3 +54,53 @@ UTP:          1000BaseT    Cat 6        100 meters
 10GBaseSR                  Multimode    26-400 meters
 10GBaseLR                  Singlemode   10 Kilometers      1310 nm cable
 10GBaseER                  Singlemode   40 Kilometers      1550 nm cable  
+******************************************************************************************************
+
+Transceivers
+
+    Multisource Agreements(MSA) allows for backwards compatibilty for fiber optic cables. They're essentially adapters for fiber optic
+cable. A Gigabit Interface Converter(GBIC) is designed for ST and SC connectors. LC and MTRJ fiber uses a transceiver called a Small
+Form-Factor plugable(SFP). An imporved version of a SFP came along called an Enhanced Small Form-Factor Pluggable(SFP+). Used if 
+specified by the swithc and is more common today. A Quad Small Form-Factor Pluggable (QSFP) is designed for 40Gb ethernet. FIber always
+has duplex, one cable sends and one cable receives. Single cable is Bidirectional(BIDI), and has a specific transceiver. Sends on one
+color and receives on another. 
+
+Review
+*Fiber-optic supports multi-connection types from various vendor MSA's
+*SFP and SFP+ are for small form-factor receivers
+*QSFP is designed for 40 Gbps Ethernet
+*************************************************************************************************************
+
+Connecting Ethernet Scenarios
+
+1) Loop issues:
+    Two switches connected to another switch connected to the cloud. Another smaller switch is added. A bridging loop is created when
+a switch is connected to another switch twice. A Spanning Tree Protocol(STP) was created to prevent loops. One switch will be established
+as the Root switch, which monitors data for loop and will turn of port connected to looping switch. 
+
+2) Malicious machine on network
+    A machine performing a Layer Two Attack, which is a physical connection, is plugged in and floods the network. A flood guard is
+implimented to prevent this from happening. The switch will turn the port off that is flooding the network. 
+
+3) Mismatched switch issue:
+    New switch, like a 10Gb switch which cannot do anything else, when plugged into slower switch like a 100BaseT, will slow down to match the older
+switch. Without auto-switchign ports, a crossover cable is used. The switch will fail to work in this scenario. Different speeds will show up on the
+speed light on the switch.
+
+4) Dedicated High-Speed Ports:
+    Multiple switches of same speed with dedicated 1Gb(High Speed) ports. Connect high speed ports as a backbone, then down to the 
+slower switches. Maybe use a dedicated high speed switch for backbone. Most switches these days are auto-configuring speeds
+
+5) Uplink and Crossover
+    Two different networks on two seperate switches where the two different networks can't talk to each other. Diagnose the inter-connection
+between those switches. The two switches are connected with a straight through cable. Take a stright through cable from regular port to
+uplink port, or uplink port to regular port. Or use a crossover cable from two regular ports. Technically can run a crossover cable form
+uplink to uplink port. Modern switches are full-duplex
+
+6) Duplex problems:
+    Two computers connected with a crossover cable(568a to 568b). GO into device manager, find netrwork card and set to half duplex
+
+Review:
+*Proper switch configuation will avoid bridging loops
+*Match Switch speed to newtork speeds to avoid a slowdown issue to speed mismatch
+*Most current switches autodetect eliminating crossover and uplink cable requirments
