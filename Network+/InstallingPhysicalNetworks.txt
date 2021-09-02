@@ -1,0 +1,41 @@
+Installation of Physical Networks
+
+
+Structured Cabling:
+    This is a practice of organizing network cabling. Most switched are in the Tele-Communication closet, with horizontal runs
+leaving the closet to the computers. A patch panel is a collection of RJ-45 ports that connect to network switch. Patch cables
+have stranded cores and are used to collect panels anmd switches. Standards for structing cables in the EIA-TIA standards, or more
+modernly known as TIA standards. Define things like how to wire crimps, how many wall sockets, etc. 
+
+Review:
+    *Structured cabling define how to install cabling
+    *TIA standards specify wiring standards for structured cabling
+    *Patch panels terminate one end of horizontal runs
+    *Patch cables connect switches to patch ppanels and computers to wall outlets
+**********************************************************************************************************************************
+
+Terminating Structured Cabling
+
+    Most RJ-45s are almost exclusively used for patch cables. The rest of the time a 110 punchdown is used. The cables is actually
+hardwired to the back of a patch panel. All patch panels have a Cat rating. Each connection is "PUnched Down". 568a and 568b standards
+still apply. Wire is layed down into grooves, and punchdown tool is used to set a cut wire. Then an RJ-45 connector is placed into 
+patch panel. 
+
+Review:
+    *RJ-45 crimps are only used for patch cables
+    *Horizontal runs are terminated with 110-Punchdowns
+    *Patch panels and RJ-45 connectors also have Cat ratings
+**********************************************************************************************************************************
+
+Equipment rooms
+
+    Most racks are 19". Main Distribution Frame(MDF). Intermediate Distribution Frame(IDF) are added on as secondary frames. All panels
+will have a primary switch. Racks have a "U" for "unit", which is the unit of measurement rack sections are divided into. 1 U servers
+are called pizza box servers. 
+    A Demarc is what seperates the property of the phone/ineternet company, and the users property. Big coxial will come from utility,
+and connect into cable modemm or create a demarc extension then into a cable motem. 
+
+Review:
+    *The rimary room is called the MDF (Main Distribution Frame)
+    *Rack mounted equipment is standardized at 19" wide and a multile of 1 3/4" tall (called a unit)
+    *The demarc seperates the telecom company's property from you responsiblity.
