@@ -39,3 +39,75 @@ Review:
     *The rimary room is called the MDF (Main Distribution Frame)
     *Rack mounted equipment is standardized at 19" wide and a multile of 1 3/4" tall (called a unit)
     *The demarc seperates the telecom company's property from you responsiblity.
+
+**********************************************************************************************************************************
+
+Alternative Distribution Panels
+
+    110-Blocks are the standard for copper wire distribution systems, but there is another called a 66-punchdown system. **There's
+actually one of these at the plant in the telecommunication closet. Used for phone lines. Can run cabled from 66-block patch panels 
+to a 110-block patch panel. 
+    Fiber optic systems use fiber distribution panels. Run fiber to switch and connect with a transciever. 
+
+Review:
+    *A 66-punchdown block is a very old patch panel and is typically used in a non-Vo1P telephone system
+    *a 110-punchdown block patch panel is the way to distribute copper wired networks
+    *A fiber distribution patch panel is used to distribute fiber-optic networks 
+**********************************************************************************************************************************
+
+Testing Cable
+    
+    Testing equipment is needed to test long runs. Wiremap tests if wire on both ends is mapped to the right place in an RJ-45 format.
+Compares wires 1&2, 3&6 4&5 and 7&8. Will blink green if correct. Continuity tests if the wires are even connected at all and if in 
+the right order. Distance is tested using a Time Domain Reflector(TDR). EIA-TIA specifies that a horizontal run should be no more than
+90 meters because wiring is rated for 100 meters. The extra 10 meters allows for patch cabling. TDR is also used by fiber and is called
+an Optical TDR (OTDR). More expensive testers inculde Near-end Crosstalk(NEXT), Far-end Crosstalk (FEXT). Crosstalk is interferance
+between pairs of cables. Crosstalk is measured in decibals. 
+
+Review:
+    *Undersrtand how to read and interpret the wiremap feature of  a cable tester
+    *Continuity testing will show if the cable has any breaks
+    *A time domain reflectometer(TDR) will show the length of the cable and help pinpoint mid-cable breaks. 
+
+**********************************************************************************************************************************
+
+Troubleshooting structured cabling
+
+    Three main pieces: work area, horizontal cabling, and the equipment room. First thing to look for is network connectivity flags 
+in the operating system(windows will be network manager, linux ifconfig). Check if there's a link light on the machine and the switch.
+Check if the network card is even enabled, or if there are bad device drivers. Check loopback, which is an RJ-45 with the wires crossed
+back into itself. The loopback address is 127.0.0.1, and the loopback device is plugged into machine. Most network cards will recognize 
+a loop back device. Loobacks aren't used very often. Patch cables are notorious for breaking. The actual wall plug itself is subject 
+to damage. 
+
+Review:
+    *Loopback plugs test the NICS ability to send and recieve 
+    *Loopback plugs aren't effective but is still on the Network+
+    *Patch cables and wall outlets are the most common part of structures cabling
+
+Troublshooting structured cabling part 2
+
+    Number one place for structured cabling problems is in the work area, but problems in the work room still occur. If the switch
+goes down, all internet goes down. Check if work room is powered correctly. Heat and moisture can affect this. Check horizontal cables
+with TDR. Interference will drive horizontal runs crazy. Cable is certified by cable companies. 
+    Fiber optic cabling and in particular multimode cabling is susceptable to Modal Distortion. Light travels through multimode in 
+different modes. Light sort of "breaks down" towards the end of run. 
+
+Review:
+    *Voltage monitors track and record problems with power
+    *Environment/temperature monitors track and record problem with heat and humidity
+    *TDRs are great tools to check for breaks on horizontal runs
+
+**********************************************************************************************************************************
+
+Using Toners
+
+    A Fox and Hound or Toner genorator and Tone prode. Tone generator creates a tone that is recognized by probe. Allows a technician 
+to figure out which wire goes where. Unplug switch as to not generate activity that will interfere with tone. Insert probe into RJ-45
+outlet and listen for alert. 
+
+Review:
+    *Toner generators and tone probes are used to locate cables and connections
+    *Tone generators create the signal for the probe
+    *Tone probes translate the signal into an audible tone
+
