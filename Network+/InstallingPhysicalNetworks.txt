@@ -111,3 +111,34 @@ Review:
     *Tone generators create the signal for the probe
     *Tone probes translate the signal into an audible tone
 
+*********************************************************************************************************************************
+
+Wired Connections scenarios
+
+2 Wiring issues:
+    1)Attenuation - signal degredation over length of cable. This happens with runs over 100 meters.
+    2)Jitter - loss of data and packets. Big problem with voice over ip and video. anything with constant stream
+        *increase through-put
+        *find bottlenecks
+        *buffering - certain amount of allowed delayed
+Incorrect Cable type:
+    ALways try to pull the latest and best cable, like Cat 6A. Patch cables are usually the source of the problem.
+When a cable is used that is too small or mismatched, usually speeds will fluctuate. 
+
+No Connection Problems:
+    Bad ports on switched and in walls.  
+
+TX/RX Reverse:
+    Using improper cable as in a crossover or straight through, or crimping cables wrong. Label crossovers, not 
+stright-throughs. Some uplink ports need to have a button pushed. 
+
+Bent Pins:
+    Pins inside switch bend, just replace them. 
+
+Open/Short:
+    Pulled bad cable run, or terminated cable wrong. 
+
+Review:
+    *For jitters in VOIP(Voice Over Ip) and vidieo streaming, consiuder buffering or increasing speed
+    *Make sure the patch cable specification is up-to-date with the network speed
+    *If switch lights are not  blinkig, try different ports or check if it's and uplink port

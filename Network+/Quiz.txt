@@ -57,3 +57,22 @@ Section 5:
     4) WHich of the following is not a common network problem?
         *COnnecting switches in a tree structure is common therefore not a problem. Loops, replay attacks and vector inits are all problem
         1000BaseLX supports runs of 100m over mutlimode fiber
+
+*******************************************************************************************************************
+
+Section 6:
+    1)Which of the following is not an elemnet of structured cabling?
+        *Table-top rack. Telecommunication closet, horizontal run and work area are all part of structured cabling.
+    2)Patch panels and punch down tools are used of which kinfd of network cables?
+        *Horizontal runs. These are punched down to the back of a patch panel on one end and the wall on the other
+    3)Wich of the follwoing is not a distribution panel?
+        *166 punch down. 110, 66 and fiber distribution panel are all correct
+    4)WHich of the following is not a cable test?
+        *ping. Wiremap, continutity and cable length are all valid tests
+    5)A network tech suspects a wiring issue in a work area. WHich element does she not need to check?
+        *ensure router to the isp is good is not in the work area. switch lights, network settings and loopbacks
+        are all in the work area.
+    6) A fox and hound are also known as what?
+        *toner generator and tone probe
+    7)Which of the following is not a common wired network problem?
+        *UTP cables under 100m. Attenuation, Jitter and wrong cable type are all common problems
