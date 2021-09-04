@@ -1,0 +1,83 @@
+TCP/IP Basics
+
+IP Addressing and Binary:
+    IP addresses are 32 bit numbers. 4 8-bit numbers "seperated" by dots. Called dotted decimal notation. 2^8 or 
+256 combinations(0 - 255). To convert. bit positions in 8 bi tnumber range for least significant (1) to most signfificant
+(128). Byte == Octet. 
+
+Review:
+    *Each computer on a TCP network must have unique ip address
+    *IPv4 addresses are written as four octets
+
+*****************************************************************************************************************
+
+Intro to ARP
+    Addess Resoltuion Protocal is a broadcast sent out onto network looking for response from specific IP address. 
+Basically, a pc will send out an ARP asking for machine with specific ip address to respond with it's MAC address. 
+Most machines will keep a list, or "cache" of ip address on network. 
+
+Review:
+    *ARP resolves IP addresses
+    *ARP is what a computer uses when it knows the IP address, but needs the MAC address
+    *type arp -a on windows to see the ARP cache.
+    *arp broadcasts on network
+
+****************************************************************************************************************
+
+Classful Addressing
+
+    IANA or Internet Assigned Numbers AUthority keeps track of all ip addresses and delegates them as needed. Thye
+give these to RIRs or Regional Internet Registry, which represent different regions on earth. Then each RIR sends
+ip address to ISPs. Class Licenses are categories of ip addresses. Class A starts with 0-126 / 8, Class B 128-191 / 16
+, Class C 192-223 / 24. Class A have millions of local ips, Class B has 65,643, Class C has 255. Back in the "old days",
+the least amount of machines you could have on a network is 254. Networks can be broke into subnets.
+    Subnets: a /16 network can be broke into a bunch of /24. The number after the backslash is the length of the 
+subnet mask. The larger the number after the /, ie the larger the mask, means fewer machines on network. Actual ipp
+addresses can't end with 0 or 255, but subnets can. Subnet masks don't have to be divisible by 8, but usually are. 
+A subnet mask is all ones followed by all zeros. 
+
+Review:
+    *Classfull subnetting was the first effort to divide network IDs
+    *Class A B and C licenses
+    *Memorize the first octet to know class license
+
+******************************************************************************************************************
+
+Subnet Masks
+
+    To connect to the "internet", machine must ARP to the router's Default Gateway. Subnets help determine wether
+to send data to local network or on the internet. Every computer has similar network id. Can not end with zero, zeros
+are reseerver for network id. Subent mask is a string of ones the seperates the host id from the network id. Subnet /8
+is 255.0.0.0, /16 is 255.255.0.0 and /24 is 255.255.255.0. The subnet mask can be shortened to add more machines via
+subnets. 0 and 1 can't be used, so 254 total machines allowed. Machines wil use subnet masks to decide wether the data 
+it's sending is going to local machine, or if it needs to send it to the Default Gateway. If ip address is local, 
+the sender just ARPs on local. If network IDs don't match, data is sent to default gateway. 
+
+Review:
+    *Each host needs a subnet mask
+    *The host used the subnet mask to know is the dest is local or remote
+    *Each host knows the default gateway so it can forward traffic to remote networks.
+
+******************************************************************************************************************
+
+Subnetting with CIDR
+    CLasses Inter-Domain Routing. Most subnetting is done by ISPs. ISPs will chop up networks between users. CIDR
+doesn't use subnet masks divisible by 8, but divisible by one, so a subnet mask can be any lnegth. If bits in any 
+single postion are differnet, then you have a whole new subnet. You'll see subnets represented with backslashes, 
+like /25. Basically an extension of a CLassful subnet mask. Remember bitwise operators and binary. If mask is CIDR two 
+bit postions, that 4 different subnets or "possiblities". 
+
+Visual
+
+Mask: 11111111 11111111 11111111 | 11 | 111111 = 255.255.255.192 
+ip  : 11010000 00011001 10100000 | 00 | 000001 = 208.25.160.1-62
+                                 | 01 | 000001 = 208.25.160.65-126
+                                 | 10 | 000001 = 208.25.160.129-190
+                                 | 11 | 000001 = 208.25.160.193-254
+
+*The more you subnet, the fewer hosts you have
+
+Review:
+    *CIDR= Classless inter-domain routing
+    *Subnet masks have all 1's on the left and 0's on the right
+    *The more subnets you have, the fewer hosts you have
