@@ -81,3 +81,56 @@ Review:
     *CIDR= Classless inter-domain routing
     *Subnet masks have all 1's on the left and 0's on the right
     *The more subnets you have, the fewer hosts you have
+
+***********************************************************************************************************************
+
+Classless Inter-Domain Routing(CIDR)
+    Servers need static IP addresses. Subnetting allows for broadcasting static ip to interent. Say I only need 4 static ip addresses.
+/24 has 254 hosts, /25 has 126 addresses, /26 has 62 hosts, /27 has 30 hosts, /28 has 14 hosts, /29 has 6 hosts, /30 has 2 hosts, and /31
+has 0 hosts. 32 - Mask length (number on other side of /), converted to binary minus 2 host(.1 and .0 are for router). /16 has 65535 possible hosts.
+/17 has 32765 possible host (32 - 17 = 15. 15 = 111111111111111 or 32767. Substract 2 = 32765). 
+
+Example 1: 
+    In need of 4 static ip addresses for servers. If relying of ISP for number of hosts, they will keep one ip for gateway. 
+
+Example 2:
+    Ask ISP for certain number of ip addresses. ISP will give you subnet mask and network id. Network ip address 199.44.6.80/28.
+Ip addr range of 199.44.6.81 through 199.44.6.94. Bitwise math: 32 - /28 = 4 bit postitons (0 - 15 decimal) minus 2 for default 
+gateways. 
+
+Review:
+    *CIDR = Classless Inter-DOmain Routing
+    *SUbnet Masks have all 1's on the left and 0's on the right
+    *The more subnets you have the fewer hosts are available. 
+
+*****************************************************************************************************************************
+
+Dynamic and Static Ip Addressing
+    All machines need an Ip address, Subnet Mask and Default Gateway. DHCP = Dynamic Host Configuartion protocol(Linux = BOOTP(Bootstrap
+Protocol)) are responsible for dynamically allocating ips. When a machine is booted up, it doesn't initially have an ip, and relies on 
+a DHCP server. Most home routers act as a DHCP server and the PCs are the DHCP clients. Machine on boot sends out a DHCP discover, which is 
+a broadcast, looking for DHCP server. When the DHCP Discover i.e. broadcast is picked up by the DHCP server, the server responds with 
+a unicast signal, knowing the clients MAC, called a DHCP offer. The DHCP offer has all the info the client needs, ip addr, subnet mask 
+and default gateway. The client accepts, and send DCHP request to DHCP server. The DHCP server then send a DHCP ackowledgemnt, and the server
+will store this client information. Each network should only have one DHCP server, and must be within Broadcast Domain. 
+
+Windows DHCP:
+    Plug into wired network. Command line> ipconfig will show network info. Go to network adapter settings, then properties, the IP
+setting. Here you can see DHCP automatically turned on. Here you can change to static and enter ip addr. Command line> ipconfig /all 
+will give more info. Linux and MAC command> ifconfig. With /all, You can see DHCP server ip, and if router is acting as DHCP server, 
+the this address will be the same as Default Gateway. To access router in browser, go to default gateway ip in serach bar. On router 
+home page, go to LAN settings. Here you can change subnet mack, enable or disable DHCP server, or enable DHCP Relay which forwards 
+DHCP requests to outside DHCP server. DHCP needs a starting IP address with a host ip, number of DHCP users, Client lease time(the amount
+of time before DHCP clietn needs to reapply). Static DNS.
+    ipconfig /release on mahcine will let go of ip address. to reconnect, ipconfig /renew. Windows Server has DHCP server. Set scope 
+which is range of ip address to connect to DHC. Enter subnet mask. Exclusions are ip ranges kept away from DHCP scope. Set up lease
+duration, which is the amount of time before DHCP clients have to reapply. Domain Name Servers can be configured here too. Scope has 
+to be activated.
+    Small networks usually have router DHCP server, and large newtorks will have a way to configure their own. DHCP will need pool 
+of ips, subnet mask and default gateway. Once machine is plugged into network, info if automatically broadcasted and picked up by 
+DHCP server.
+    
+Review:
+    *Each broadcast domain should only hvae one DHCP server
+    *Every modern os comes with DHCP enabled by default
+    *DHCP Relay enables a single DHCP serer to service more than one broadcast domain
