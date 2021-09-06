@@ -134,3 +134,36 @@ Review:
     *Each broadcast domain should only hvae one DHCP server
     *Every modern os comes with DHCP enabled by default
     *DHCP Relay enables a single DHCP serer to service more than one broadcast domain
+
+*****************************************************************************************************************************
+
+Rogue DHCP Servers
+
+    All DHCP problems manifest in the same way, which is no network connection. Check ipconfig for APIPA, or Automatic Private IP addressing. When DHCP server can't be found by client, ip address will be wrong and maybe even the subnet mask. If nothing is wrong with the connection to the client, then something may be wrong with DHCP server. All APIPA addresses are 169.254.xxx.xxx. These last two bytes are specific to the client. If machine can't connect but other things can, like a printer, then it's almost certainly a DHCP server issue. 
+
+    A Rogue DHCP server is when you have more than one DHCP server, and is identified by a completely different network ID. 
+
+Review:
+    *If you get an APIPA adress, check to see if you are connected to a DHCP server
+    *If you are connected to a DHCP server and still get an APIPA address, make sure the DHCP server is working
+    *If you get an IP address other than yoyr correct network ID, you may have a rogue DHCP server. 
+
+************************************************************************************************************************
+
+Special Ip Addresses
+
+Private Ip Address:
+    1) any ip address that starts with a 10.x.x.x
+    2) 172.16.x.x - 172.31.x.x. 
+    3) any ip address that starts with 192.168.x.x
+    *These are obfuscated behind a NAT device, hiding these addrs from internet
+Loopback Addresses:
+    Local hosts, loopback adapters. Ping 127.0.0.1. Old way for testing NICs. You can type in 127.0.x.x with any number and will ping.
+Loopback for IPv6:
+    ::1. 
+APIPA (Automatic Private Ip Addressing):
+    An address assigned to machine when machine can't reach DHCP server. This allows machine to be able to communicate locally. Almost always 169.254.x.x. In internet settings on widnows, you can configure pc to assign APIPA automatically or you can specify address.
+Review:
+    *Special ip addresses are 10.x.x.x, 172.16.x.x- 172.31.x.x and 192.168.x.x
+    *The loopback addrs for IPv4 is 127.0.0.1 and for IPv6 is ::1.
+    *An APIPA addr (169.254.x.x) indicates the DHCP server is down
