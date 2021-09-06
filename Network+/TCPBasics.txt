@@ -167,3 +167,33 @@ Review:
     *Special ip addresses are 10.x.x.x, 172.16.x.x- 172.31.x.x and 192.168.x.x
     *The loopback addrs for IPv4 is 127.0.0.1 and for IPv6 is ::1.
     *An APIPA addr (169.254.x.x) indicates the DHCP server is down
+
+***************************************************************************************************************************
+
+Ip Addressing Scenarios
+
+Scenario 1)
+    Standard NAT router/DHCP server with two machines connected. One WIndows 10, the Other Ubuntu. Problem: Duplicate ip address. 
+Caused by either a rouge DHCP servers, or two static IPs clash. Most Operating systems will address this and give you a prompt. Linux 
+won't necessarily give you an error. Ubuntu: ifconfig. Check for duplicates. 
+
+Scenario 2)
+    Duplicate MAC addresses come into play with virtual machines, specifially when duplicating machines. Most will default into hub
+mode and break. 
+
+Scenario 3)
+    Incorrect gateway prevents you from reaching the "outside world". A "rouge box" on a netowrk talking with the outside world
+could give other DHCP clients the wrong gateways. Also refered to as a Man in the Middle. Run ipconfig/ifonfig and make sure Default
+Gateway is correct. 
+    Incorrect subnet mask will happen when, you guessed it, the subnet mask is entered incorrectly. Just beause a machine can ping 
+another, doesn't mean its subnet mask is correct. If one machine can ping another, but that ,machine can't ping back, then check 
+subnet mask. 
+
+Scenario 4)
+    Expired IP Address occurs when the DHCP lease is up. Once client gets lease, waits half of the lease time, then asks server to 
+renew lease with same ip. If DHCP server dies, the client lease will expire. If a client can't reach a DHCP server after half of lease
+time, then keeps ip for full length of lease. This will result in an APIPA(169.254.x.x).
+
+Review:
+    *Virtual Machines can be the source of duplicate MAC address errors
+    *All the computers in one broadcast domain have the sam esubnet mask

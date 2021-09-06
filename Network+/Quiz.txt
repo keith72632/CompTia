@@ -76,3 +76,31 @@ Section 6:
         *toner generator and tone probe
     7)Which of the following is not a common wired network problem?
         *UTP cables under 100m. Attenuation, Jitter and wrong cable type are all common problems
+
+*************************************************************************************************************************
+
+Section 7:
+    1) Which decimal number is 10110110
+        *128 + 32 + 16 + 4 + 2 = 182
+    2) What does ARP stand for and what does it do?
+        *Address Resolution Protocol learns and stores MAC addrs by listening to broadcasts
+    3) WHich statment is not true of subnet mask?
+        *subnet masks are NOT sent as one of the fields in IP packet. They ARE used to determine network ids, leftmost numbers
+        are always 1 and never sent out of host.
+    4) Here are three IP addresses: 216.53.12.11, 130.222.255.170, 223.255.6.88. What class of addresses are each one (in order)?
+        *C, B, C. Class A = 1 - 126. Class B = 128 0 191. Class C 192 - 223
+    5) Needs 25 ip addresses on Class C with address 217.105.2.0
+        */27. /27 generate 8 subnets with 30 hosts per, /26 4 subnets with 62 per, /28 16 subnets with 14 hosts per, and /29 32
+        subnets with 6 addresses per
+    6)A company has subnetted their Class C network address into four subnets with a /26 subnet mask. 
+      What are the addresses of the four subnets?
+        *0, 64m 128 and 192 represent all of the possible values of 1 and 0's in the first two columns of the 4th octet in a Class
+        C address. bits 7 and 8 range, which increments by 64
+    7) Which serveice does not automatically assign an ip to a host
+        *static. DHCP bootp and APIPA all automatically assign addrs
+    8) WHich is true of a rogue DHCP server?
+        *A rogue DHCP server can assign incompatibale IP addresses to host
+    9) WHich of the following is noit a special ip address?
+        *169.253.4.185. 10.255.1.1 is special, as is 192.168.70.70 and 127.0.0.1
+    10) Which symptom is not a result of an ip addressing problem?
+        *Static ip address. Duplicate ip, duplicate mac and incorrct gateway are all synmptoms of ip addressing problem
