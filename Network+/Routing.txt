@@ -35,3 +35,36 @@ Review:
     *Every TCP packet has two port numbers
     *Well known port numbers run from 0 to 1023
     *Clients generate ephermeral numbers that are always between 1024 and 65535
+
+*****************************************************************************************************************************************
+
+Network Address Translation NAT
+    Built into routers. Switches privates ip addresses with the router's address but saves the sender's local ip. When info returns
+router looks at Routing Table for local ip address of the reciever. This allows for fewer public ip addresses on the net. 
+    Different versions of NAT: Static NAT(SNAT) = Port Forwarding. All data on one ip address goes to single machine. Dynamic NAT
+or Pooled NAT. Store public IP address for machines to use for port forwarding.
+
+Review:
+    *PAT translates internal IP addresses to an internet address and tracks the packets. 
+    *SNAT sends specific traffic to one internal ip address
+    *DNAT has a limited pool of internet addresses to give to a number of internal devices.
+
+****************************************************************************************************************************************
+
+Implementing NAT
+    Home router scenario. Most have NAT turned on by default. Enterprise routers have NAT turned off by default. *WAN == Wide-area
+network, and LAN = Local Area network. WAN is public ip. 
+
+Review:
+    *SOHO (small office and home office) routers ship with NATenables
+    *NAT on a SOHO router can be disabled from the routers configuartion page
+    *Some older routers call this setting gateway/router mode
+
+NAT Youtube
+    A way to conserve ip addresses. NAT converts public addresses to private addresses. 4 billion public ip addresses available.
+When local machine needs to access internet, their private ip address will be translated into the one public ip. NAT was needed to 
+solve the IPV4 problem. When everything moves to IPv6, NAT will no longer be needed
+
+****************************************************************************************************************************************
+
+
