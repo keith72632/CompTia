@@ -67,4 +67,59 @@ solve the IPV4 problem. When everything moves to IPv6, NAT will no longer be nee
 
 ****************************************************************************************************************************************
 
+Forwarding Ports
 
+    SOHO firewalls will block unitiated information when not configured to do so, called forwarding ports. This allows for things like
+servers within a local network to speak to the internet. 
+    Port Forwarding on a NAT cpable router to remotely access a local machine with a WAN ip address of 1.1.1.1(bogus ip). Machine has 
+address of 192.168.5.11. For demonstration, network has a security camera with ip of 192.168.5.13 talking to local machines. TO access
+camera from outside world, port forwarding is needed. Cofigure port fowrarding on NAT router 1.1.1.1 on port 8181. Connect port of 
+camera(port 80) with link to WAN ip address port of 8181. Access camera on WAN with ip addr:8181. TO configure, log into router with 
+defalt gateway ip wbpage. Find port forwarding options and cofigure port from(8181) and port to (80. Camera). Use 'offbeat' ports for 
+security. Port forwarded devices should be password protected. 
+    Port Range Forwarding opens multiple ports. Some devices will use cloud to access machine locally instead of ports, but aren't as
+secure. 
+    Port Triggering is a type of forwarding, say with FTP(port 20 and 21), where client will send on port 21 but recieve on 20, which 
+causes a problem. Port triggering allows both 20 and 21 open when data is sent on 21, to allowfor reception of data. TO configure, log 
+into router and find Port Triggering. Configure trigger range of FTP client and server. 
+    SOHO DMZ is a forwarding of ports allows anything on the internet to be sent to a specific machine. DMZs are set up as a trap
+for hackers. To cofigure in router, find DMZ tab and configure Ip of dmz. On test, questions about which ports for which applications
+are used and how to configure them.
+
+Review:
+    *Port forwarding allows external devices to have internal communication through a router
+    *Port triggering will open an alternative assigned port when the inital port is contacted
+    *Enabling DMZ when setting up port forwading places that device outside protection of that router
+****************************************************************************************************************************************
+
+Tour of SOHO Router
+    All routers will have some type of documentation. All routers will have a default ip, username and password. Most will come with
+propietary software which usually isn't used. TO access, plug machine into LAN port and look for default gateway. The default ip of
+router can be reconfigured. WAN connection type can have AUto DHCP. Routers can be hacked if default gateway is left as default. MAC
+address clone are good for cable modums by getting MAC address from pc and typing it in. Telenet and SSH can be configure here to be 
+reached by the internet. In Web access tab, you can configure wether they use HTTP or HTTPS. Remote access allows for router access
+remotely, which can be dangerous. Firewalls can be configured to pick up on traffic that wasn't initiated by machine on network. You 
+can block certain apps or block traffic during certain times. Firmware can be upgraded here by downloading update from manufacturer.
+This can trash a router. To fix busted router, unplug all cables and hit the hard reset button for 30 seconds, with button held 
+unplug cable for 30 seconds, then plug back in, with button still held, for another 30 seconds. 
+
+Review:
+    *All home routers have a default ip address, username and password
+    *Almost all home routers are DHCP servers
+    *Router WAN connections are commonly DHCP clients by default.
+**************************************************************************************************************************************
+
+SOHO vs Enterprise Router
+    SOHOs are gateway routers, which is one default gateway connected to internet. These will have a switch built in and a built in
+Wireless Access Point built in. DHCP is also built in. An Enterprise level router is more robust. Has multiple internet connections 
+on back. Has good power supplies. Enterprise won't have wireless connection or switches. 100x the bandwith and can handles 10's of multiple 
+connections compared to SOHO. SOHO has an easier customizable firewall. SOHO will have web interface while Enterprise routers won't. Conncet 
+to enterprise router via Putty. Cisco routers have its own command line OS. Has it's own language, and things like IP address and VPNs can be
+set up. 
+
+Review:
+    *SOHO routers are for small groups (5-6 devices) and can have built-in capability for switches, firewalls and WAPs (Wireless access points)
+    *Enterprice routers have expanded connection capability to other devices (i.e. routers, switches and WAP's)
+    *SOHO routers often have Web-based interfaces, enterprise routers typically have their own OS interface
+
+**************************************************************************************************************************************
