@@ -123,3 +123,29 @@ Review:
     *SOHO routers often have Web-based interfaces, enterprise routers typically have their own OS interface
 
 **************************************************************************************************************************************
+
+Static Routes
+    All routers, along with all computers have Routing Tables. To look at routing table on windows, type ">route print". 
+Active Routes:
+Network destination     Netmask     Gateway     Interface       Metric
+0.0.0.0                 0.0.0.0     192.168.4.1 192.168.4.76        76: I don't care where the info is going, send through gateway,
+                                                                        on network card(Interface) with priority 76, Unless...
+127.0.0.0               255.0.0.0    on-line    127.0.0.1          331: going to local host. on-line means don't go to gateway.
+127.0.0.1               255.255.255.255 ol      127.0.0.1          331: same thing as above.
+192.168.4.0             /24          on-line    $(my ip)        281: send out though net, not gateway. forwarded port
+$(My ip)                /32          on-line    $(my ip)              : sends to self
+
+*Multicast (class D) ip starts with 224 and is a secondary, temporary ip address
+*netstat -r 
+
+Scenario:
+    Two switches hooked together locally. Link static routes between switches. 
+
+Static routes are good for little internal networks, but get too complicated when talking on the internet
+
+Review:
+    *A static route is a fixed route that is manually configured and persistent
+    *Use route print or netstat -r to display current known routes from the routing tables
+    *Routing tables contain address information for destination, subnet mask, gateway and NIC
+*************8************************************************************************************************************************
+
