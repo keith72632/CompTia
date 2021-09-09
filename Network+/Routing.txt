@@ -149,3 +149,33 @@ Review:
     *Routing tables contain address information for destination, subnet mask, gateway and NIC
 *************8************************************************************************************************************************
 
+Dynamic Routing
+    Combats convergence issues when connections or routers go down. The purpose of routes is to not only facility connections, but
+use certain methods to keep things running smoothly or dynamically. Dynamic routing is just the logic for this within a router. 
+Convergence = All routes hard connected. The Metric value is essentially the priority for routes. Hop Count is the number a routers
+to get to the network id. MTU Maxiumum Transmission Unit is the measure of data hauled within a frame. Bandwith is the spead of transmission
+of data through a network. Latency is the measure of the reaction time of a route. 
+    Two sub sections of Dynamic Routing: Distance Vector and Link State. DV is older, sometimes refered to as RIP. Sends entire rotuing
+table to neighboring routers. Big issues with hop count. Also sends in intervals, which can be slow. Link State is modern and improved,
+which sends out Link State Advertisments, which is sort of like a ping, and when an anomaly is detected, notifies other routers. 
+    All Dynamic routing can be broken into two groups: Interior gateway protocols and exterier gateway protocols. All routers within
+an AS or Autonomous System is one organization or routers under one systems control. To communicate outside of AS, use an EGP, otherwise
+using IGP for external work. Only EGP in BGP, or Border Gateway Protocol, which asigns you an Autonomous system number (ASN). 
+
+Review:
+    *Dynamic Routing protocols use metrics to determine routes and are either distance vector or link state
+    *Dynamic routing protocols are either IGP(Interior Gateway Protocol) or EGP(Exterior Gateway Protocol)
+    *BGP is the EGP protocol used for Inter-Autonomous system routing. 
+*************8************************************************************************************************************************
+
+RIP Routing Information Protocol
+    Used is smaller networks, Interior Gateway Protocol and Distance Vector Protocol. Routers have to be configured for RIP. A group
+of routers will show each other their routing tables. Learns of multiple "ways" to a certain network, derives the metric from hop count
+and decides the faster path. Downside to RIP is how long it takes to reach convergence. RIP v1 could only do Classful netrworks, not
+CIDRs. RIP v2 can handle CIDR newtorks and has more security. RIP max hop count is 15. 
+
+Review:
+    *RIp is a distance vector protocol that uses hop count to determine routes
+    *RIP1 used only classful networks
+    *RIP max hop count is 15
+
