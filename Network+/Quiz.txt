@@ -104,3 +104,40 @@ Section 7:
         *169.253.4.185. 10.255.1.1 is special, as is 192.168.70.70 and 127.0.0.1
     10) Which symptom is not a result of an ip addressing problem?
         *Static ip address. Duplicate ip, duplicate mac and incorrct gateway are all synmptoms of ip addressing problem
+
+*************************************************************************************************************************
+
+Section 8:
+    1) What is the job of the router?
+        *To connect networks with different ids
+    2) What is the role of port numbers?
+        *Port numbers identify the sending and recieving prosess between two hosts
+    3) What is true of a NAT router?
+        *NAT routers replace the source ip address with its own IP address
+    4) True or False: Most SOHO routers come with NAT enabled?
+        *TRUE
+    5) Port forwarding allows which of the following?
+        *Outside access to hosts on the LAN side of a NAT router
+    6) A tech has just installed a SOHO router for a client. Which security task should the tech perform first?
+        *Change the administrator name and password
+    7) Which feature of a SOHO router is typically not found in an enterprise router?
+        *Built-in swtich. SOHO and enterprise routers both has at least two router interfaces, must be manage and will have GUI and 
+        a CLI, and both must have their interfaces configured
+    8) Which is not true of static routes?
+        *Static routes are entered manually but can be automaticaly changed by the router. True of static routes:
+        routers can have static routes, Hosts can have static routes and static routes must be entered manually and 
+        cannot be automatically changed by router
+    9) Which of the following is not an elemnt of a route metric?
+        *The physical distance between routers is not considered when defining a metric. Maximum Transer Unit(MTU), cost and bandwith
+        are all considerations 
+    10) Which of the following is not a characteristic of RIP?
+        *False: RIps supports maximum hop count of 127. It's max hop count is actually 127. RIP is a distance protocol and an
+        Interior Gateway Protocol(IGP), and it's primary metic is Hop COunt.
+    11) Which of the following is not a characteristic of the OSPF routing protocol?
+        *False: OSPF is a distance vector protocol. TRUE: it's actually a link state. OSPF is grouped into areas and OSPF routers
+        in area will elect a designated rotuer and a backup designated router
+    12) Which of the following is not a characteristic of the BGP routing protocol?
+        *False: OSPF is the primary routing protocol between Autonomous Systems. True: BGP is a hybrid between distance vector and
+        link state and is broken up into sub systems called Autonomous Systems, and it's primary function is to route bewteen these
+        autonomous systems
+
