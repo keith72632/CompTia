@@ -1,0 +1,56 @@
+Section 9:TCP/IP Applications
+
+TCP and UDP
+    Protocol Data Units(PDU) can be an ethernet frame, or an ip packet depending on what the application is and what part of the OSI 
+stack frame is in. TCP = TCP segment UDP = UDP datagram. TCP is connection, UDP is connectionless. UDP is handy for tansfering things
+on a closed, small network
+    TCP 3 way handshake. Client sends SYN packet to server. Server sends SYN/ACK to client. Client sends ACK back to server.
+
+Review:
+    *Ethernet frames are used by switches and routers
+    *PDU is the information used by the different protocols provided in the frame segments
+    *TCP is the connection-oreinted 2-way communication initiated by a 3-way handshake process
+        (syn, syn-ack, ack)
+    *UDP is a connectionless-oriented protocol with low overhead with it's one-way communication
+
+****************************************************************************************************************************************
+
+ICMP and IGMP
+    ICMP (Internet Control Message Protocol) is different from tcp and udp. Doesn't work at transfer layer, but ip layer, so no 
+port numbers. No data, just type and checksum. THIS IS PING. Arp is another form of ICMP. 
+    IGMP (Internet Group Managment Protocol) packet has type, checksum, group address and source address. Multicast is a set of
+reserveded ip addresses starting with 224. Essentially giving you pc a second ip address. 
+
+**ICMP and IGMP work with the internet layer in the TCP/IP model
+
+Review:
+    *ICMP works at the internet(2) layer in TCP/IP model and the network(3) in the OSI model
+    *IGMP provides multicastring support
+    *Multicast addresses always start with 224
+
+***************************************************************************************************************************************
+
+Handy Tools
+
+Trace Route:
+    windows: tracert
+    linux  : traceroute
+use command ip address, ex. traceroute $(IP ADDR). Used to test if our routers are ok. Shows your router first. if nothing comes after,
+then something is wrong with your router. Some routers don't respond well to this command
+
+Path Ping
+    command: pathping $(addr)
+Very quick, essentially just pings al routers. 
+
+Bandwidth speed tester
+    web based applications like Xfinity. Has different speeds for uploads and downloads. If slow, could be ISP, but most of the time
+it's a bad/cheap router. 
+
+Review:
+    *Both tracert and traceroute commnands display the hops through a router to reach a destination
+    *Using the alternative command pathping is quicker because it's essentially just a ping
+    *Bandwidth speed testing helps verify the upload and download speeds to an individual computer
+
+***************************************************************************************************************************************
+***************************************************************************************************************************************
+
