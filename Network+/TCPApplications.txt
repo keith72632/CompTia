@@ -52,5 +52,40 @@ Review:
     *Bandwidth speed testing helps verify the upload and download speeds to an individual computer
 
 ***************************************************************************************************************************************
+
+Introduction to Wireshark
+    Wireshark is a protocol analyzer. Run wireshark and hit stop to freeze data. Double click to bring up frame info
+ Rember, ipconifg /release and ipconfig /renew to disconnect and connect DHCP. Wireshark sees this as bootp(linux)
+
+Alternative Capture Tools:
+    -tcpdump. Save output into file and load into Wireshark for faster capturing
+
+Wireshark can be programmed to run at certain times or look for certain things, As can TCP dump. 
+
+Review:
+    *Wireshark is a protocol analyzer integrated with a frame capture tool
+    *Wireshark displays the traffic flow of Ethernet frames and can drill down into the frame-viewing various protocols,
+    ports, timelines and services
+    *Wireshark can segment and organize the data into consumable information to help in troubleshooting
+    *port 443 is almost always web browser related (HTTPS)
+
 ***************************************************************************************************************************************
+
+Intro to Netstat
+    Shows connections established between you machine and network. Command = netstat. Shows every connection along with protocol.
+Shows protocol, ip and source port.
+Flags:
+    -n = only numbers
+    -b = shows executable for each connection
+    -o = shows PID
+    -a = all active ports, wether they have connections or not
+    -r = shows local routing table
+
+ANother simialar tool is process explorer
+
+*netstat keeps track of all connections
+Review:
+    *The netstat command lists all open ports and network connections on a computer
+    *Run netstat at the command prompt 
+    *Make sure to know the netstat switch displayed in this episode
 
