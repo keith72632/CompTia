@@ -62,6 +62,10 @@ Alternative Capture Tools:
 
 Wireshark can be programmed to run at certain times or look for certain things, As can TCP dump. 
 
+Filters work with dot notations. Examples
+    *http.request.method==GET
+    *tcp.port==443
+
 Review:
     *Wireshark is a protocol analyzer integrated with a frame capture tool
     *Wireshark displays the traffic flow of Ethernet frames and can drill down into the frame-viewing various protocols,
@@ -88,4 +92,35 @@ Review:
     *The netstat command lists all open ports and network connections on a computer
     *Run netstat at the command prompt 
     *Make sure to know the netstat switch displayed in this episode
+
+*************************************************************************************************************************************
+
+Web Servers
+    HTTP stands for HypterText Transfer Protocal. Port 80. netstat -a to see if server is running. Most quesions on Comptia is
+microsoft, So mnost questions are based on internet explorer. Go to internet tools for internet options. GET is a network command 
+to load contents of a webage. Wireshark will shows contents of GET request. Mkae sure to filter for http. 
+    *Right click in wireshark on click tcp stream to show data for webpage
+Wireshark https. Uses tcp. Filter using: tcp. https uses two different protocols: SSL and TLS, sets up encryption for https to work.
+
+Review:
+    *Web servers host web sites and web clients access web servers
+    *http uses tcp port 80 by default 
+    *https uses tcp port 443 by default
+
+*************************************************************************************************************************************
+
+FTP File Transer Protocol
+    Windows needs third party tools. port 21 and 20. Uses shared folders between client and server. Create an anonymous account if 
+required. A lot of fpt client software. ipswitch for windows is popular. Connect with ftp server's ip address to gain access to shared 
+folder. You can also use a web browser as an fpt client. Type fpt://ipaddr_of_fptserver in search bar. fpt://ftp.microsoft.com. Another 
+way to access fpt is command line. Command: ftp. open ip_addr_of_fpt. Then login. Use GET to receive files and PUT to add files. Wireshark:
+fpt filter. When logging in, it's good manners to use an email address as password. FTP is not encrypted, so passwords and usernames are 
+not obfuscated. To do secure ftp, use SFTP(Secure File Transfer Protocol) which uses SSL and TLS. TFTP Trivial FTP is a UDP protocol
+and runs on ort 69. 
+
+Review:
+    *FTP runs on port 21 and recieves on port 20
+    *FTP is a file transfer protocol, consider SFTP as a more secure method
+    *FTP servers listen on port 21 and send data back to the clients on port 20
+    *FTP is not encrypted so all passwords and usernames are sent in clear  
 
