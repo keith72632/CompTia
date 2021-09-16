@@ -123,4 +123,59 @@ Review:
     *FTP is a file transfer protocol, consider SFTP as a more secure method
     *FTP servers listen on port 21 and send data back to the clients on port 20
     *FTP is not encrypted so all passwords and usernames are sent in clear  
+****************************************************************************************************************************************
+
+E-mail Servers and Clients
+
+    Old school email had actual clients and servers that weren't web based. SMTP Simple Mail Transfer Protocol on port 25. Receiving 
+emanil POP3 Post Offcie Protocol port 110, and Internet Meesage access protocol IMAP port 143. First set up SMTP, then client with 
+IMAP and POP3. Beneficial to have software that runs as server and client. hMailServer is one of these universal softwares. Setup a 
+domain name for server. Set up email accounts. In client, like Mozilla Thunderbird, use name@serverdomain, and conifgure server port 
+connection. Differnece between POP3 and IMAP is POP3, anything in server is copied down to computer. IMAP copies of email are left online,
+and can create folders that match on client and online. Wireshark can pick up these email transfers. You can see authorizations and
+email sent. SMTP 25, POP3 110 and IMAP 143. 
+
+Youtube
+    Email client sends email to mail server, which is then connected to network(or internet). SMTP servers have databases with user's
+email addresses, lined to the DNS(name@domain.com).Via the DNS it can get the ip address of domain.com.
+    POP and IMAP are protocols for inbound email on the Application layer. Stands for Post Office Protocol & Internet Message Access
+Protocol. Mail comes from internet to mail server, then mail server to client via POP or IMAP. POP does not kee the server and client
+in sync. When mail is downloaded, it is deleted from the server, so the server is not further updated. IMAP keeps the client and server
+synced, so you have to explicitly tell the server to delete the email, where POP does the delete automatically, IMAP will keep track 
+of things like moving email to different folder. POST doesn't keep copy, IMA does
+
+Review:
+    *SMTP uses port 25
+    *POP3 uses port 110
+    *IMAP uses port 143
+****************************************************************************************************************************************
+
+Securing Email
+    Email originaly, SMTP IMAP and POP3 are not secure. All email servers can be encrypted. Servers run SMTP, and uses IMAP(port143)
+clients. Moving fron unecypted to encrypted was not simple. Traditional TLS would enter server through traditioanl ports, then switch 
+over to encrypted. Client would connect using port 143(IMAP) then switch to 993. POP3(110) would switch to 995, and SMTP(25) would switch
+to port 465.
+    STARTTLS starts as encrypted without switching. IMAP, POP3 and SMTP start on port 465. Problem with STARTTLS was in the early days
+servers tried to facilitate both Traditional TLS and STARTTLS. To fix this, they made port 465 temporary unitl 587 could be used. 
+    Figure out which ports to start with on client, then which portocol (TLS or STARTTLS) to use.
+TLS:
+    *SMTP 25 -> 465
+    *POP 110 -> 995
+    *IMAP143 -> 993
+STARTTLS:
+    *start 465 ->587
+
+Youtube SSL, TLS, HTTP and HTTPS
+    HTTP Hyptertext Transfer Protocol is most widely used for viewing we pages. Standard HTTP data is sent in clear text. HTTPS
+is the secure version of HTTP, encrypts data being receieved by HTTP. HTTP protects data with SSL Secure Socket Layer uses public 
+key encrytpion. When client connected to website using SSL, the web browser will ask comuter to verify itself, then sends computer
+a certificate, which is used to authenticate identity of website. TLS Transport Layer Security is the latest standard. Based on same
+protocols as SSL. 
+
+Review:
+    *SMTP, POP3 and IMAP are unencrypted e-mail protocols
+    *Implementing unencrypted email protocols with TLS has comlpex port assignments
+    *The STARTTLS extension ususes only one port (587) for encrypted communication
+
+****************************************************************************************************************************************
 

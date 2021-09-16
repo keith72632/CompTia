@@ -21,7 +21,7 @@ Review:
     *ARP is what a computer uses when it knows the IP address, but needs the MAC address
     *type arp -a on windows to see the ARP cache.
     *arp broadcasts on network
-
+**arp-scan -l shows all connections
 ****************************************************************************************************************
 
 Classful Addressing
