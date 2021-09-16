@@ -49,6 +49,20 @@ Review:
     *SNAT sends specific traffic to one internal ip address
     *DNAT has a limited pool of internet addresses to give to a number of internal devices.
 
+
+Youtube
+    
+PAT Port Address Translation(Overload):
+    Send data to router, router looks at src and dest port to distiguish wich device and application to send back to. Router builds
+NAT table to save private address. 
+
+Dynamic NAT
+    Router doesn't save addresses. Creates a pool of addresses. Gives the addresses from the pool out as needed. No assigned addresses
+in table. 
+
+Static NAT
+    Manually type in addresses and port numbers into the NAT table. Other than that, works the same as PAT and DNAT. 
+
 ****************************************************************************************************************************************
 
 Implementing NAT

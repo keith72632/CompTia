@@ -179,3 +179,19 @@ Review:
 
 ****************************************************************************************************************************************
 
+Telnet and SSH
+    Command prompt connected to another computer. Telnet server and client. Windows doesn't have Telnet by default. freeSSHd is a 
+popular Telnet server for windows. Telnet runs on port 23. Putty is the biggest client software. Don't give Telnet access to root 
+directories. Telnet has no encryption whatsoever. In wireshark Telnet passwords and usernmaes can be monitored. Telnet emulates a 
+terminal, so in TCPdump, you'll see all commands, ANSII codes, passwords etc. 
+    SSH Secure Shell does more than just act as encrypted version of Telnet. Looks identical to Telnet. SSH uses an authentication
+key. ANother old version of both of these tools is called rlogin, and uses port 513, not secure whatsoever. 
+
+Review:
+    *Telnet is unencrypted and runs over TCP port 23
+    *SSH runs over port TCP port 22
+    *SSH is fully encrypted and has almost completely replaced telnet.    
+****************************************************************************************************************************************
+
+
+

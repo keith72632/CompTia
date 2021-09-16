@@ -35,3 +35,62 @@ Steps for created an ethernet frame for outgoing:
 	4) Network interface [link] add MAC address and run frame check sequence. Packet completed and sent
 
 
+**********************************************************************************************************************************
+
+Youtube Notes
+
+OSI Model
+    A visual representation of how networks work. Designed for multi-vendor systems. Not used a lot, but still referenced
+
+Layer 1 Physical Layer:
+    Cables, network cards and ethernet stuff
+
+Layer 2 Data Link
+    MAC addresses are added and switches configured
+
+Layer3 Network
+    IP addresses and routers
+
+Layer 4 Transport 
+    TCP, UDP and Port Numbers
+
+Layer 5 Session
+    Responsible for initializing and termination sessions between devices
+
+Layer 6 Presentation
+    Format data in a way receiving application can understand it. Encrypts data if needed
+
+Layer 7 Application
+    SMTP, FTP, Telnet. 
+
+All People Seem To Need Data Processing => Application Presentation Session Transport Network Data Physical
+
+Scenario: Sending and email
+    Process of breaking down data is called Encapsulation. 
+    Step 1: Application:  User creates the data and and prepares to send it via SMTP
+    Step 2: Presentation: Data is formatted in a way receiving application can understand, like ASCII. Encrypt if needed
+    Step 3: Session: A session with receiving mail server is started
+    Step 4: Transport: Decides between TCP or UDP. This will uses TCP, src and dest port numbers added
+    Step 5: Network: The ip address of mail server is added as destination, along with source ip address
+    Step 6: Data: The MAC address of router and src MAC of host is added to the data
+    Step 7: Physical: The data is sent out using ethernet in a Frame  
+    *The receiver will process the data the same way, but in reverse. This is called DE-ENCAPSULATION
+
+Troubleshooting
+    Often problems are refered to as layer [ insert layer number ]. 
+    Layer 1 Physical: Are the cables not connected or damaged? is something wrong with NIC?
+    Layer 2 Data: Maybe the switch has gone bad?
+    Layer 3 Network: Is the router functioning? do I have the right ip address?
+
+
+*********************************************************************************************************************************
+
+On-Path Attacks
+    Man in the Middle attack. Redirects traffic to themselves, thenm passes it to destination like nothing happened. ARP Poisoning 
+is where the Routing Table is manipulated to send data to malicious machine first. Needs to be on local subnet. ARP typically works
+by broadcasting "who is this ip address?" and recieve MAC address in return which is stored in an ARP Cache on requesting machine. 
+This way it doesn't have to ask for MAC again. Man in the middle will send arp to victim machine, tricking the victim into thinking
+it's a different machine, i.e. poisoning the cache. The malicious machine does the same thing to the router, making a circuit between
+the three. 
+    Has to be on physical network. Either by plugging in physically to network, or with a Trojan on a pc on the network. These can
+be in a browser, called man-in-the-browser. 
