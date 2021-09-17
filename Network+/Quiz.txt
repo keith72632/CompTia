@@ -140,4 +140,38 @@ Section 8:
         *False: OSPF is the primary routing protocol between Autonomous Systems. True: BGP is a hybrid between distance vector and
         link state and is broken up into sub systems called Autonomous Systems, and it's primary function is to route bewteen these
         autonomous systems
+*************************************************************************************************************************
 
+Section 9:
+    1) Which characteristic is true of TCP?
+    *TCP uses the FIN message to close a connection. TCP is connection-oriented, UDP is connectionless. TCP three-way handshake is 
+    SYN -> SYN, ACK -> ACK
+    2) Ping uses which IP layer protocol?
+    *ICMP Internet Control Message Protocol. Address Resolution Protocol (ARP) maps ip addresses to mac address. RIP is a dynamic,
+    distance vector routing protocol. FTP is file transfer potocol and has nothing to do with Ping.
+    3) Which of the following is not a network information or troubleshooting utility?
+    *FTP. This is a file transfer application. Tracert(aka tracerout) shows all of the hops between the station running the utility
+    and the user specified destination. Pathping also shows hops between hosts and a destination but uses a less sophisticated protocol.
+    Bandwidth testers are great for determining the upload speeds bewteen given sites
+    4) Which is not true about protocol analyzers such as wireshark?
+    *Protocol analyzers cannot create packets and frames. They can only capture and display them. ALl of the other choices are true
+    about protocol analyzers. 
+    5) Which is the primary purpose of netstat?
+        *Netstat is a command line utility that shows a computer's network connections. Netstat does not capture data. Netstat shows
+        connection to web servers, but also more. Netstat is not graphical and does not tall inbound or outbound data. 
+    6) FTP uses TCP port 20 and TCP ort 21. Which choice describes hot the ports are used?
+        *FTP servers listen for commands on port 21 and respond with data on port 20
+    7) Which of the following is a secure email protocol?
+        *Start Transport Layer Security (STLS) is the current approach to running secure email protocols. SMTP, POP, IMAP are all older,
+        unsecure mail protocols
+    8) Which choice describes a significant difference between Telnet and SSH?
+        *Telnet runs on TCP port 23 and is an unecnrypted terminal emulation application that runs on both client and server. SSH runs
+        on TCP port 22 and is the same as Telnet, but encrypted. Telnet are both terminal emulators, not telephony or sharing protocols.
+        Telnet needs client and server. SSH needs a client and server
+    9) Which is the default port for NTP?
+        *123
+    10) Which of the following is not a network service problem?
+        *Exclusion. It is perfectly acceptable to reserve (or exclude) IP addresses from the DHCP scope. The DHCP scope should not include
+        any addresses that should be reserved or statically assigned to hosts. Running out of IP addresses from the DHCP scope can result
+        in some hosts not recieving a DHCP address and us an alternate or APIPA address. Long lease time can cause a DHCP server to  run
+        out of IP addresses, even thorugh many addresses that were handed out are no longer in use.

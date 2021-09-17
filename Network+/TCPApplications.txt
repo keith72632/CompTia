@@ -193,5 +193,40 @@ Review:
     *SSH is fully encrypted and has almost completely replaced telnet.    
 ****************************************************************************************************************************************
 
+Network Time Protocol
+    NTP. On internet there are computers whose job it is to keep time. NTP funs on port 123. Also refered to as Internet Time and
+is a server. Phone systems, windows logins etc. Keeps systems in sync
+
+Review:
+    *NTP is a networking protocol for clock sycnronization 
+    *NTP uses port 123
+    *There are hundreds of NTP servers world wide
+****************************************************************************************************************************************
+
+Network Service Scenarios
+
+Scenario One:
+    DHCP issue. DHCP server handing ips to three machines. DHCP range of 192.168.4.2 through .254. Never use .1, this is resevred 
+for gateway.This is called reservation. File server needs ip address reserved. It's best to configure DHCP server with a smalled scope,
+say of .100 to .254, and put the file server between .2 and .99. SOme people will leave scope full, and create exclusions within the scope
+which is considered a bad idea. With devices where specific ip isn't crucial but always need one, use MAC reservation. This tells 
+DHCP to always assign a device with the specified MAC address an ip
+
+Scenario Two:
+    Goes to log onto machine but doesn't have internet. Checks ip and sees 169.245.x.x, which is an APIPA, which means the machine
+is not getting an ip address from DHCP server. This means the DHCP scope has been exhausted and needs more ip addresses added to 
+scope. Having long DHCP leases can cause this too. Long DHCP leases are fine for stationary machines, but with a wireless network 
+where tons of different machine are connecting and disconnecting, longer lease times are not needed. In a real world scenario, machines
+are in and out in minutes, but DHCP saves these for the duration of the lease time, which can pile up.
+
+DHCP servers by themselves are not perfect, and with the influx of devices we have these days, has cause a strain on dhcp. IPAM or
+ip address management, are tools to keep track of all ip addresses. Great for servers or huge farms of server machines
+
+Review:
+    *DHCP scope ranges need to consider gateway, rinters and other types of hosts to provide for IP reservations
+    *MAC reservations can be used to define devices that have top priority for address assignment
+    *IPAM tools track and manage allotted IP addresses, keeping address requirment available for server and VM farms.
+
+****************************************************************************************************************************************
 
 
