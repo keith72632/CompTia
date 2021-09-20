@@ -1,0 +1,24 @@
+Section 10 Network Naming
+
+Understanding DNS
+    The process of naming IP addresses for easy human interaction. Domain Name System (DNS) resolves ip address based on Fully 
+Qualified Domain Names (FQDN). Top level domain include .com, .net. Domain names don't have to start with www, but it's prefered.
+FTP addresses can start with fpt, mail servers can start with smtp. Secondary domain is essentially the name. Domain name has host,
+secondary and primary domain (host.secondary.com). Domain name cannot be more than 256 characters. DNS servers respond to queries and
+fullfill queries. ipconfig / all will show DNS server settings. DNS servers have root hints built into it, which are a set of ip addresses
+for root DNS servers. Root servers direct to specific servers like .com or .org. Then sends the ip address back to computer. Computers
+store these ip addresses into cache, or memory, so machine doesn't have to go through DNS process again. Famous google server 8.8.8.8
+is used a lot. 
+
+Review:
+    *DNS resolves FQDNs to IP addresses
+    *www.total.sem.com is an example of an FQDN 
+    *.com and .edu are examples of top-level domains(TLDS)
+
+*********************************************************************************************************************************************
+
+Applying DNS
+    A DNS server is just software, like freeware bind and microsoft server DNS. Interior DNS server is just a local domain name. Use
+.local primary. Authorative DNS resolves ip addresses for local machines. The Start of AUthority of SOA is the DNS server which is the 
+primary DNS for this zone. Name Servers are the servers that link to main DNS server. Host Records can be statically added, but DHCP 
+is also used. 
