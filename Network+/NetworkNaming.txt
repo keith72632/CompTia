@@ -21,4 +21,62 @@ Applying DNS
     A DNS server is just software, like freeware bind and microsoft server DNS. Interior DNS server is just a local domain name. Use
 .local primary. Authorative DNS resolves ip addresses for local machines. The Start of AUthority of SOA is the DNS server which is the 
 primary DNS for this zone. Name Servers are the servers that link to main DNS server. Host Records can be statically added, but DHCP 
-is also used. 
+is also used. Networks can have multiple DNS servers, but always need an SOA. 
+    A forward lookup zone is a DNS zone in which hostname to ip address relations are stored. When the computer asks the IP address 
+of a specific host name, the forward lookup zone is check and the desired result is returned. Records are just the ip address/ Domain 
+name pairing. A Records ipv4 and AAAA ipv6. Canonical names are aliases that reference a record. 
+    MX records a special records for Mail servers. When a piece of mail is uploaded, mail servers use DNS servers to get mail to right
+person. Easy to spoof. A Reverse Lookup zone says "if i have an ip address, give me a domain name". PTR Pointer References are used to combat
+spoofing. RLZ are required for mail servers and resolve an ip address with a fully qualified domain name, where as a forward look up zone 
+resolves a domain name with an ip address. SRV Record is a service location that allows for a group of service types. _sip servers is the naming 
+connection. 
+    TXT Records can be used as notes between users. Also used in anti-spam worls. Two types, DKIM and SPF. External DNS servers are hosted
+on the internet. namecheap is one of these external dns. SPF records filters incoming data through specify which ip addresses are allows. DKIM
+is a certificate that allows authentication of users. 
+
+Review:
+    *CNAME record creation makes an alias name or "known name", often created for user interfacing
+    *A reverse lookup zone will resolve an ip address to an FQDN(Fully qualified domain name), and are used by mail servers
+    *TXT records, DKIM and SPF are used to identify e-mail users and reduce spam. 
+
+*********************************************************************************************************************************************
+Host's File
+    Used before DNS. A listing of names and associated ip address. Host file takes precedence over DNS. In etc folder labeled "hosts". 
+
+Review:
+    *The hosts file contains ip addresses and their corresponding names
+    *Every computer that runs TCP/IP has a host file
+    *the hosts file takes precedence over DNS
+*********************************************************************************************************************************************
+The Net Command
+
+net-
+    net view- lists machines on network
+        *\\computername-shows shared folders
+    net user- lists info about current user
+    net use [DRIVE LETTER]: \\nameofserver\sharedfoldername -assign drive letter to shared folder
+        *then just type drive letter into command prompt, then dir to list files
+    net share [sharedfile]=c:\Users\[NAME]\[LOCATION]- creates a shared folder. 
+    net accounts-shows settings for accounts
+    net start-shows all services that are network based on system
+    net stop [SERVICE NAME]-turns off specified service
+*net view is biggest use
+
+Review:
+    *The net command is a very old command that helps manage networks
+    *the net command has many different options to manage a network (net use, net share, etc)
+    *The net view command shows everything that is on the network.
+
+*********************************************************************************************************************************************
+
+Youtube
+    1) Type domain name in browser.
+    2) PC checks local cache on pc and browser, along with local config file to see if this domain name is "saved"
+    3) If domain name isn't in one of these places, pc will query a domain name server for ip address related to domain name
+    4) The DNS (managed by ISP) checks it's cache for the domain name. If dn isn't found, this DNS sends a query to a Root DNS server
+    5) Root is at the top of hirearchy. 13 roots in the world. Provides details of top level domains (.com .org .net)
+    6) Root queries a Top Level DOmain server (TLD) for the specifc extension such as .com
+    7) Query Authoratative Name Server for the seconodary name. www.google.com, google is the secondary name. This returns ip address
+       to the pc. 
+DNS is port 53
+

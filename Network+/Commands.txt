@@ -1,0 +1,15 @@
+List of common commands
+
+Windows:
+
+net-
+      net view- lists machines on network
+          *\\computername-shows shared folders
+      net user- lists info about current user
+      net use [DRIVE LETTER]: \\nameofserver\sharedfoldername -assign drive letter to shared folder
+          *then just type drive letter into command prompt, then dir to list files
+      net share [sharedfile]=c:\Users\[NAME]\[LOCATION]- creates a shared folder.
+      net accounts-shows settings for accounts
+      net start-shows all services that are network based on system
+      net stop [SERVICE NAME]-turns off specified service
+ *net view is biggest usek
