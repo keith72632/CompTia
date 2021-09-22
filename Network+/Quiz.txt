@@ -175,3 +175,19 @@ Section 9:
         any addresses that should be reserved or statically assigned to hosts. Running out of IP addresses from the DHCP scope can result
         in some hosts not recieving a DHCP address and us an alternate or APIPA address. Long lease time can cause a DHCP server to  run
         out of IP addresses, even thorugh many addresses that were handed out are no longer in use.
+
+*************************************************************************************************************************
+
+Section 10 Network Naming
+
+1) In what folder in the hosts file in?
+    *C:\Windows\System32\Drivers\etc
+2) What commnad will assign a drive letter to a network share?
+    *net use
+3) The primary command-line tool to troubleshoot Windows naming issues is what?
+    *nbtstat
+4) What is the job of a DDNS (dynamic DNS)?
+    *The DDNS tracks IP address changes of a local device and updates DNS to reflect those changes
+5) A website just changed its IP address and a user is unable to reach it's domain name. What command makes pc relearn ip?
+    *ipconfig /flushdns
+
