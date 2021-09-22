@@ -26,7 +26,7 @@ apr-
     /n [IP ADDR]-arps specific ip addr
     /d-deletes entry with specified ip address from arp table
 
-nbstat-
+nbtstat-
     -n = shows name
     -c = shows names in cache. names dont stay here for long, so net view to get name, then ping, then it will show up in cache
     -a [machine name] = system name
