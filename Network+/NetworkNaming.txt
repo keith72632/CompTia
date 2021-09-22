@@ -79,4 +79,47 @@ Youtube
     7) Query Authoratative Name Server for the seconodary name. www.google.com, google is the secondary name. This returns ip address
        to the pc. 
 DNS is port 53
+*********************************************************************************************************************************************
+
+Windows Name Resolution
+    NetBIOS 137 138 139 used to handle name resoltuion. Now LLMNR or Link Local Multicast Name Resolution, running on port 355, handles
+name resolution. WIndows 10 pro runs both Netbios and LLMNR, but windows home only uses LLMNR. nbtstat is a tool used to troubleshoot
+naming issues. Doesn't play well with LLMNR. Every winfows system has registered names. -n shows computer name. Shows number which indicate
+what machine is used for. -c shows name in cache and these aren't kept for very long. Net view shows other machines, ping these machines and
+then they will show up in cache. - a [student name] shows info for specified machine. -r shows stats in ASCII which doesn't always register. 
+Resolved by Name Server does not mean DNS, it refers to an old software. -R and -RR resets and renews cache respectively. 
+
+Review:
+    *Netbios is an old protocol that manages connections based on the name of the computers within a LAN
+    *Link Local Multicast Name Resoltuin LLMNR is a protocol that allows hosts to name resolution for hosts on the same local link
+    *nbstat is a diagnostic command that can be useful but has some issues with LLMNR
+
+*********************************************************************************************************************************************
+Dynamic DNS
+    Ip address of routers change and can cause problems with port forwarding. Dynamic DNS service companies will pair a domain name with
+WAN ip address of router. www.tzo.com is a dynamic DNS service company. domainname.tzo.org. Sign up and get TZO key. Download tzo client 
+and enter key. This client talks to DNS server. TZO will info for client. Set router up with port forwarding to device. 
+
+Review:
+    *Dynamic DNS enables you to use a DHCP-assigned IP address for connection
+    *DDNS providers can update IP information
+*********************************************************************************************************************************************
+
+DNS Troubleshooting
+    Number one clue of DNS problem is the hints in the actual webpage (will say dns lookup failed). If you can access webpage by ip
+address but not domain name, this a dns problem.
+    Check for configuation problem with ipconfig /all and find DNS server ip. Go into network connection -> properties and go to ip settings.
+You can set DNS settings seperately. Check to see if DNS is set up manually or automatically. Check to see if DNS settings are the same as 
+the settings given to you by isp. Always have two DNS server settings incase of outage. Prefered and Alternate. Moving websites can cause
+DNS problems. Computer and DNS server will cache the ip addresses of website. Fix this by wiping cache. see cache with ipconfig /displaydns.
+ipconfig /flushdns will clear the cache and system will go to dns and force resolution.
+    8.8.8.8 is the big google dns server and is a greate alternate dns server. Check is DNS server is good
+    Domain Information Groper(DIG) is used to test DNS servers. Use this with domain name to see if name can be resolved. DNS servers
+won't respond to queries for security reasons.
+    Ping is a good way to troubleshoot DNS. Ping a domain name. Ping has to resolve connection to FQDM
+
+Review:
+    *Use an IP address of a website to test connectivity without a DNS
+    *Run ipconfig /flushdns to clear the DNS resolver cache
+    *Run nslookup or dig to check the status of a DNS server
 

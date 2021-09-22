@@ -13,3 +13,27 @@ net-
       net start-shows all services that are network based on system
       net stop [SERVICE NAME]-turns off specified service
  *net view is biggest usek
+
+ipconfig-
+    /all- displays full TCP/IP configuration for all adapters
+    /displaydns-contents of the DNS client cache
+    /flushdns will clear cache and renew DNS
+    /release-send DHCP release to DHCP server which tell the server to discard the ip address config
+    /renew-renews DHCP lease
+    
+apr-
+    /a-dispalys all current arp cache tables
+    /n [IP ADDR]-arps specific ip addr
+    /d-deletes entry with specified ip address from arp table
+
+nbstat-
+    -n = shows name
+    -c = shows names in cache. names dont stay here for long, so net view to get name, then ping, then it will show up in cache
+    -a [machine name] = system name
+    -r = stats for what machine has been doing lately
+    -R = resets the remote cache table
+    -RR = rebroadcasts info to the world.
+
+nslookup- shows dns information
+
+server [dns ip address] - shows if name can be resolved.
