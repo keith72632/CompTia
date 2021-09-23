@@ -1,0 +1,65 @@
+Section 11 Securing TCP
+
+	CIA Confidentiality Integrity Availablity. Encryption is used for securing data. Integrity is also imperative 
+to network security. Non-repudiation is the idea of confidence in the integrity of data. Availabilty is important for
+a good user experience, like backups, or not secruing a system to the point on unusablilty. Authentication is giving 
+someone the right to use something. Authoriazation is allowing a user to access certain aspects of program. 
+
+Review:
+	*Security can be broken into three areas, Confidentiality, integrity and availability. 
+	*Confidentiality can be addresses through encryption
+	*Confidentiality and intergrity must be balanced with alailibility.
+
+************************************************************************************************************************
+
+Symmmetric Encryption
+	Encrypt text using various protocols, like Ceaser Cypher. Increments each letter in alphabet by specified amount.
+Easily hackable. Algorithms are used to obfuscate the values and have a key for decyphering. The key is a long number. Key
+is repeating underneath clear text. Each letter is incemented by each corresponding number. Encryption needs algorithm and 
+key value. Wireless networks use RC4 and ACS encryption. Encryption inlvolbes clear text, cypher text, algorithm and a key.
+
+Review:
+	*Cleartext is any unencrypted data
+	*Algorithms use keys to encrypt cleartext into ciphertext
+	*An algorith that uses the same key to encrypt and decrypt is a symmetric encryption
+
+*************************************************************************************************************************
+
+Asymmetric Encryption
+	The difference in symmetric and asymettric is asymmetric has a public and private key. Public keys encrypt, private
+keys decrypt. Send public key to user, called key exchange. Key exchange, either user can encrypt data, then use private keys
+to decrypt. If public key is sent but the user doesn't have private key, then thery can't decrypt data. 
+
+Review:
+	*Asymmetric encryption uses a public and private key 
+	*Public keys encrypt, private keys decrypt
+	*For to people to communicate, they must exchange public keys
+
+***************************************************************************************************************************
+
+Cryptographic Hashed
+	Used to verify if data is good. An algorithm that "hashes" the data into a string of text that is fixed in size, no matter
+what size the data is. Common place for hashes is when downloading files, like an ubuntu iso. Download server will give examples of
+hashes. Two common hashes, MD5 and SHA-1. SHA-2 is becoming more popular. You can check the integrity of file with these hashes. A 
+Hash Generator is a way of hashing any sort of file. Multiple hashed MDx and SHA-x
+
+Review:
+	*Hashes are used for verifying data, not for encryption
+	*Hash values are always fixed in size
+	*Two common hashes are MD-5 and SHA-1
+
+****************************************************************************************************************************
+
+Indentification
+	Identification verifies who you are, authentication proves which rights you have, authorization specifies specfic rights 
+user has. Authentication factors include something you know, something you have, and something about you. A password is an example 
+of something you know. So is captcha, which prevents dictionary attacks. Smart cards are an example of something you have, a RSA key
+also. RSA tokens, or keys, stores a code and generate a new value every so many seconds. Fingerprints and facial recognition are an
+example of something about you. Something you do example would be the rythm of your typing. Somewhere you are verfies based on location.
+Gas pumps, etc. In Windows you can create authentication based on trust based on domains. Multifactor authentication is popular. 
+
+Review:
+	*Authentication requires sharing of something you know, something you have, or something you do
+	*A smartcard is an example of something you have, security questions are an example of something you know
+	*Federated system trust is inherited from a different trusted system
+****************************************************************************************************************************** 
