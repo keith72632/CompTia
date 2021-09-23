@@ -37,3 +37,67 @@ nbtstat-
 nslookup- shows dns information
 
 server [dns ip address] - shows if name can be resolved.
+
+********************************************************************************************************************************
+
+Linux
+
+ping: 
+    *ping -c 4 ipaddr specifies the number of pings
+
+ifconfig:
+    -a
+
+host: shows ip for domain name
+
+ip:
+    *ip -4 addr or ip -6 addr for ivp4 and ivp6
+    *
+
+route: shows how traffic is routed
+    -n gives ip addresses. shows gateway ip address
+
+systemd-resolve: 
+    --status: shows dns server setting
+
+dhclient: dhcp functions
+    -v: verbose
+    -r: release
+        *run sudo dhclient after release with no flags to renew
+
+traceroute:
+    *traceroute [ipaddr] - shows how many hops between machine and ip address specified
+
+netstat: shows all networking applications running on machine. specfic types of protocols are expressed through flags. --help or man
+
+dhclient: dynamic host configuartion protocol client
+
+Editing static ip addresses
+    */etc/netplan/*.yaml file
+    *this file has a tabbed tree structure like:
+        network:
+            ethernets:
+                adaptername:
+                    etc:
+    *under adapter create addresses:
+    *under addresses add ip address with syntax
+        - [ip addr]/24
+    *on same level ass addresses add gateway4: [gateway ip addr]
+    *on same level add nameservers:
+    *under nameserver add addresses: [primary dns, alternative dns]
+APPLY CHANGES: sudo netplan apply
+    *this updates yaml file
+    *check ip with ip addr
+
+Static ip EXAMPLE
+
+network:
+    ethernets:
+        enp5s0:
+            dhcp4: no
+            addresses:
+                - 192.168.1.10/24
+            gateway4: 192.168.1.1
+            nameservers:
+                addresses: [8.8.8.8, 1.1.1.1]
+    version: 2
