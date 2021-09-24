@@ -63,3 +63,66 @@ Review:
 	*A smartcard is an example of something you have, security questions are an example of something you know
 	*Federated system trust is inherited from a different trusted system
 ****************************************************************************************************************************** 
+
+Access Control
+	Access Control Lists exist everywhere, and can invloved many different things. Usually passwords and usernames. Three types of
+access control. First is Mandatory Access Control (MAC), and is essentially a lableing system defining wether you can access or not. 
+Discretionary Access Control is more specifc, doing things like allowinbg certain users to read files while other can read or write.
+Role Based Access Control uses groups. Group users together and define permissions here. 
+
+Review:
+	*Mandatory Access Control (MAC) used labels
+	*Discretionary access control (DAC) gives the creators control over permissions
+	*Role-based access control (RBAC) uses groups
+
+********************************************************************************************************************************
+AAA
+	RADIUS Server runs RADIUS authentication software. RADIUS client handles authentication request. RADIUS supplicants are people
+who want to get authenticated. Supplicatn request -> client -> Server. RADIUS database doesn't have to be on computer and is used by server
+to authenticate. RADIUS UDP ports 1812-1813 or 1645-1646. RADIUS is AAA (Authenticate, authorize and accounting). TACACS+ is another version 
+of AAA and is proprietary cicso product. TACAS rarely used with wireless. TACAS+ client and server. TACAS+ user is just someone logging into 
+network and wants access to router. TACAS+ uses TCP port 49. 
+
+Review:
+	*A RADIUS client is an intermediary agent between a RADIUS supplicant and a RADIUS server. 
+	*A RADIUS database of authenticated users and passwords may reside outside the RADIUS server
+	*RADIUS uses UDAP ports 1812-1813 or UDPP ports 1645-1646, and TACACS+ uses TCP port 49
+
+**********************************************************************************************************************************
+
+Kerberos/EAP
+	WLAN Wireless local area networks. Kerberos is designed to do authentication for LANs. A Key Distribution Setter or KDC is the domain 
+controller which consists of AS and TGS or Authentication Service and Ticket-Granting Service. Computer logins and sends hash to Authentication
+sever and sends back TGT token to client. The TGT is timestamped by client and sent to the Ticket Granting service, which is read, timestamped and 
+sent as a token to client. Client uses token to access any resource allowed on another machine. Kerberos needs a windows server and everything is 
+timestamped. Prevents man-in-the-middle. Needs Network Time Protcol(NTP) to sync times. PPP Point to Point Protocols. 
+	EAP or PEAP (Protected Extensible Authentication Protocol) allows transactional based mechanisms to talk to each other and share authentication
+info. EAP is essentially and envelope. EAP-PSK uses common key to login. PEAP uses standard username and password. EAP-MD5 uses hash. EAP-TLS uses a single 
+certificate from server. EAP-TTLS requires both clients and server to have certificates. EAP encaplustes every authentication a person would want. EAP vs
+Kerberos. 
+
+Review:
+	*Kerberos handles authentication and authorization for wired networks
+	*Kerberos relies heavily on time stamps
+	*EAP enables flexible authentication
+
+*************************************************************************************************************************************
+
+Single-Sign on
+	In a LAN, multiple servers, printers, computers etc. Each host has username and password. You can set up workgroup to save authorization on every machine
+but is a security issue. Single-sign on makes you login once, and have access to everything on LAN. Windows Active Directory is used for sign-on tool for LAN on windows
+server. Establish domain and have all computers join. Administrator connects each computer to domain. Federated Sytems are a system with a develop trust between systems. 
+Linux can use Samba to access local domain. Windows Active Directories are still popular with linux LAN systems
+	SAML Secturity Assertion Markup Language. System like an oil pipleine with web apps and need to be accessed securely by operators. SAML is designed for web apps. Devices
+accessible through VPN. SAML has an identity provider which you log into to access Service Providers(web apps for controlling system). Identiy provider gives token to user to 
+access Service Provider. SSO Circle sells Single Sign-on tool sets. Essentially you sign onto Identiy provider and then you have access to Service Providers. 
+
+Review:
+	*For local area networks, use Windows active directory for single sign-on
+	*SAML Security Assertion Markup Language is used to manage multiple aps using a single account
+	*SSOcircle provides a variety of service providers (SP) samples.
+
+****************************************************************************************************************************************
+
+Certificates and Trust
+	
