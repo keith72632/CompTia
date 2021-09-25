@@ -125,4 +125,47 @@ Review:
 ****************************************************************************************************************************************
 
 Certificates and Trust
-	
+	Asymetric encryption (key pair, public and private key), anytime someone logs onto site, sends key. Problem with this is the public
+key. HTTPS automatically sends public key. The problem with asymetirc is the actual key exchnage and identifying if the key is what it 
+says it is. Review, encrypt with public, decrypt with private key. There really is no difference between public and private keys. Either
+key could be public or private. Send public key along with hash of the actual webpage, as a way to verify if you're actually getting the 
+data(website) you're askingn for. This is called a digital signature. This is better, but can still be hacked. You can have thirdy party
+services esentially vouch for you by also adding their signature to the data along with key. All of this is encapsulated into a Digital 
+Certificate. Inside certificate is public key, digital signautre and third party signautre. 
+    This is all based on trust. No third party signatures is called an Unsigned Signature. Popular with local small servers.
+
+Web of trust:
+    just a bunch of users who know each other. Not alot about wot is automated. 
+
+Public Key Infastructure is a hierarchy:
+    *Certificate of Authority:
+        an organization that issues certificates like Verisign. They assume the "trust" behind a certificate
+    *Intermediate4 Certificate Authorities:
+        act as middle man between top level Certificate authority and user
+
+Review:
+    *Certificates include a public key and at least one digital signature
+    *Web of trust uses a web of mutually trusting peers
+    *Public key infastructure uses a hierearchy structure with root servers
+****************************************************************************************************************************************
+
+Certificate Error Scenarios
+    Secure Connection Failed is the most popular error.
+
+Self Signed Certificates
+    Will only have the users name attached. In the browser, this will throw an error saying it isn't secure. You can still enter 
+website if you know it and trust it
+
+Certificates Expires
+    You can see certificate in web browser. usually left of the search bar
+
+How to validate if a certificate is real
+    SRL and OCSP. These usually run auto, but can slow browsers down a little. Scenarios for invalid certificates: 
+
+Review:
+    *A self-signed certificate can throw a 443 error, as the certificate has not been issued by a certificate authority
+    *An expired certificate can be viewed, then fixe either by getting a new certificate from it's user or acceting the certifiacte
+    in it's current state
+    *The setting to query OCSP to confirm the current validity of certs is a good security setting
+
+

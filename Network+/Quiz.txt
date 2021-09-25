@@ -191,3 +191,18 @@ Section 10 Network Naming
 5) A website just changed its IP address and a user is unable to reach it's domain name. What command makes pc relearn ip?
     *ipconfig /flushdns
 
+*************************************************************************************************************************
+
+Section 11 Securing TCP/IP
+
+1) WHen securing ip netowkrs, develoers focus on serverl key principles. Which is not one of these principles?
+    *Perfomance. Confidentiality, integrity and availability are all important
+2) In terms of network security, what is the purpose of hashing?
+    *hashes verify data integrity by generating a unique value for a given chunk of data. 
+3) Which is not an authentication factor?
+    *Something you can do. Somehting you are, know and have are all authentication factors
+4) What is a digital signature?
+    *a hash of encrypted data that sender and reciever both have. 
+5) Which of the following is not a common certificate error warning?
+    *CRL. Self-signed, expired and certificate not valid are all common error warnings
+
