@@ -1,0 +1,128 @@
+Section 11 Securing TCP
+
+	CIA Confidentiality Integrity Availablity. Encryption is used for securing data. Integrity is also imperative 
+to network security. Non-repudiation is the idea of confidence in the integrity of data. Availabilty is important for
+a good user experience, like backups, or not secruing a system to the point on unusablilty. Authentication is giving 
+someone the right to use something. Authoriazation is allowing a user to access certain aspects of program. 
+
+Review:
+	*Security can be broken into three areas, Confidentiality, integrity and availability. 
+	*Confidentiality can be addresses through encryption
+	*Confidentiality and intergrity must be balanced with alailibility.
+
+************************************************************************************************************************
+
+Symmmetric Encryption
+	Encrypt text using various protocols, like Ceaser Cypher. Increments each letter in alphabet by specified amount.
+Easily hackable. Algorithms are used to obfuscate the values and have a key for decyphering. The key is a long number. Key
+is repeating underneath clear text. Each letter is incemented by each corresponding number. Encryption needs algorithm and 
+key value. Wireless networks use RC4 and ACS encryption. Encryption inlvolbes clear text, cypher text, algorithm and a key.
+
+Review:
+	*Cleartext is any unencrypted data
+	*Algorithms use keys to encrypt cleartext into ciphertext
+	*An algorith that uses the same key to encrypt and decrypt is a symmetric encryption
+
+*************************************************************************************************************************
+
+Asymmetric Encryption
+	The difference in symmetric and asymettric is asymmetric has a public and private key. Public keys encrypt, private
+keys decrypt. Send public key to user, called key exchange. Key exchange, either user can encrypt data, then use private keys
+to decrypt. If public key is sent but the user doesn't have private key, then thery can't decrypt data. 
+
+Review:
+	*Asymmetric encryption uses a public and private key 
+	*Public keys encrypt, private keys decrypt
+	*For to people to communicate, they must exchange public keys
+
+***************************************************************************************************************************
+
+Cryptographic Hashed
+	Used to verify if data is good. An algorithm that "hashes" the data into a string of text that is fixed in size, no matter
+what size the data is. Common place for hashes is when downloading files, like an ubuntu iso. Download server will give examples of
+hashes. Two common hashes, MD5 and SHA-1. SHA-2 is becoming more popular. You can check the integrity of file with these hashes. A 
+Hash Generator is a way of hashing any sort of file. Multiple hashed MDx and SHA-x
+
+Review:
+	*Hashes are used for verifying data, not for encryption
+	*Hash values are always fixed in size
+	*Two common hashes are MD-5 and SHA-1
+
+****************************************************************************************************************************
+
+Indentification
+	Identification verifies who you are, authentication proves which rights you have, authorization specifies specfic rights 
+user has. Authentication factors include something you know, something you have, and something about you. A password is an example 
+of something you know. So is captcha, which prevents dictionary attacks. Smart cards are an example of something you have, a RSA key
+also. RSA tokens, or keys, stores a code and generate a new value every so many seconds. Fingerprints and facial recognition are an
+example of something about you. Something you do example would be the rythm of your typing. Somewhere you are verfies based on location.
+Gas pumps, etc. In Windows you can create authentication based on trust based on domains. Multifactor authentication is popular. 
+
+Review:
+	*Authentication requires sharing of something you know, something you have, or something you do
+	*A smartcard is an example of something you have, security questions are an example of something you know
+	*Federated system trust is inherited from a different trusted system
+****************************************************************************************************************************** 
+
+Access Control
+	Access Control Lists exist everywhere, and can invloved many different things. Usually passwords and usernames. Three types of
+access control. First is Mandatory Access Control (MAC), and is essentially a lableing system defining wether you can access or not. 
+Discretionary Access Control is more specifc, doing things like allowinbg certain users to read files while other can read or write.
+Role Based Access Control uses groups. Group users together and define permissions here. 
+
+Review:
+	*Mandatory Access Control (MAC) used labels
+	*Discretionary access control (DAC) gives the creators control over permissions
+	*Role-based access control (RBAC) uses groups
+
+********************************************************************************************************************************
+AAA
+	RADIUS Server runs RADIUS authentication software. RADIUS client handles authentication request. RADIUS supplicants are people
+who want to get authenticated. Supplicatn request -> client -> Server. RADIUS database doesn't have to be on computer and is used by server
+to authenticate. RADIUS UDP ports 1812-1813 or 1645-1646. RADIUS is AAA (Authenticate, authorize and accounting). TACACS+ is another version 
+of AAA and is proprietary cicso product. TACAS rarely used with wireless. TACAS+ client and server. TACAS+ user is just someone logging into 
+network and wants access to router. TACAS+ uses TCP port 49. 
+
+Review:
+	*A RADIUS client is an intermediary agent between a RADIUS supplicant and a RADIUS server. 
+	*A RADIUS database of authenticated users and passwords may reside outside the RADIUS server
+	*RADIUS uses UDAP ports 1812-1813 or UDPP ports 1645-1646, and TACACS+ uses TCP port 49
+
+**********************************************************************************************************************************
+
+Kerberos/EAP
+	WLAN Wireless local area networks. Kerberos is designed to do authentication for LANs. A Key Distribution Setter or KDC is the domain 
+controller which consists of AS and TGS or Authentication Service and Ticket-Granting Service. Computer logins and sends hash to Authentication
+sever and sends back TGT token to client. The TGT is timestamped by client and sent to the Ticket Granting service, which is read, timestamped and 
+sent as a token to client. Client uses token to access any resource allowed on another machine. Kerberos needs a windows server and everything is 
+timestamped. Prevents man-in-the-middle. Needs Network Time Protcol(NTP) to sync times. PPP Point to Point Protocols. 
+	EAP or PEAP (Protected Extensible Authentication Protocol) allows transactional based mechanisms to talk to each other and share authentication
+info. EAP is essentially and envelope. EAP-PSK uses common key to login. PEAP uses standard username and password. EAP-MD5 uses hash. EAP-TLS uses a single 
+certificate from server. EAP-TTLS requires both clients and server to have certificates. EAP encaplustes every authentication a person would want. EAP vs
+Kerberos. 
+
+Review:
+	*Kerberos handles authentication and authorization for wired networks
+	*Kerberos relies heavily on time stamps
+	*EAP enables flexible authentication
+
+*************************************************************************************************************************************
+
+Single-Sign on
+	In a LAN, multiple servers, printers, computers etc. Each host has username and password. You can set up workgroup to save authorization on every machine
+but is a security issue. Single-sign on makes you login once, and have access to everything on LAN. Windows Active Directory is used for sign-on tool for LAN on windows
+server. Establish domain and have all computers join. Administrator connects each computer to domain. Federated Sytems are a system with a develop trust between systems. 
+Linux can use Samba to access local domain. Windows Active Directories are still popular with linux LAN systems
+	SAML Secturity Assertion Markup Language. System like an oil pipleine with web apps and need to be accessed securely by operators. SAML is designed for web apps. Devices
+accessible through VPN. SAML has an identity provider which you log into to access Service Providers(web apps for controlling system). Identiy provider gives token to user to 
+access Service Provider. SSO Circle sells Single Sign-on tool sets. Essentially you sign onto Identiy provider and then you have access to Service Providers. 
+
+Review:
+	*For local area networks, use Windows active directory for single sign-on
+	*SAML Security Assertion Markup Language is used to manage multiple aps using a single account
+	*SSOcircle provides a variety of service providers (SP) samples.
+
+****************************************************************************************************************************************
+
+Certificates and Trust
+	
