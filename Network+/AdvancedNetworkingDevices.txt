@@ -1,0 +1,83 @@
+***Advanced Networking Devices***
+
+Understanding Ip Tunneling
+    Tunneling is the process of running unencrypted programs THROUGH encrypted programs, like ssh. This can be configured in programs
+like Putty. A tunnel starts by making an encrypted connections between two computers. Then, port the applications to run through the
+'tunnel'.
+
+Review:
+    *Very few internet protocols are encryted
+    *Tunnels can encapsulate unencrypted protocols to create encrypted communication channels
+    *Tunnels are often used with remote access connection
+
+******************************************************************************************************************************************
+
+Virtual Private Networks
+    Allows actual access to LAN remotely. Also refered to as VPN. For this to even be possible, you would have to know the public ip
+of the router to get to it, then an ip that matches the LAN network id. Encase ip packets with public ip address of router and the ip
+address of machine that you are on remotely. When this packet hits the router, it strips away all the public stuff. This public info needs
+to be saved and reattached as data is returned. A VPN is a tunnel connection for remtoe computers to get to a designated endpoint. 
+    There are different types of VPNs like Point to Point Tunneling, Layer 2 tunneling, Secure SOcket Transfer Protocol(SSTP), etc. VPNs can be set up
+with certificates.  
+    Client-to-site VPN connects a remote computer to a local network. A VPN endpoint in the "end" of each connection in tunnel. A VPN concentrator
+is a device that provides secure creation of VPN connections and delivery of messages between VPN nodes and acts as endpoint for entire
+network. 
+    A site-to-site VPN connects distant networks into a single network. Usually consists of two VPN concentrators. 
+
+Review:
+    *A VPN creates a secure tunnel so a remote machine or network can be part of a local network
+    *A client-to-site VPN connects a remote computer to a local network
+    *A site-to-site VN connects distant networks into a single network 
+
+******************************************************************************************************************************************
+
+Introduction to VLANs
+    A Virtual LAN takes one broadcast domain into 2 or more domains. Seperates domains electronically. Two types of switches, unmanaged
+and managed switches. The latter can do VLANs. Switches run at layer 2 and use MAC address. Managed switches have an ip address that 
+enables connection and configuartion. CISCO switches uses a CNA or Cisco Network Assistant to configure switches by connected to switch
+and punch in IP. All switches by default are preset to use VLAN 1. Configure a new VLAN and then you can allow certain ports on switch 
+to new VLAN. Static access means setting each port to certain VLAN. A Trunk protocol VTP or VLAN Trunk Protocol consist of trunk ports
+which are connected through multiple switches. The ports connected via patch cables will behave the same. So if ports 5 through 8 are
+'trunked', only machines plugged into those 4 ports can speak to one another. 802.1Q is a trunking standard. VLANs take single broadcast
+domains and break them up into multipe domains
+
+Review:
+    *A VLAN splits one broadcast comain into two or more broadcast domains
+    *A managed switch that supports VLANs requires configuartion
+    *Trunking enables VLANs to be on more than one switch
+
+******************************************************************************************************************************************
+
+InterVLAN Routing
+    Big issue with VLAN is taking one newtork and breaking it up, and sometimes you want these networks to talk to each other. To do 
+this, in the old days, a router had to be connected to all VLANs. Now we use InterVLAN routing, which is a virtualization of the functions
+of a router. Higher-end swtiches offer this. InterVLAN routing acts as mutliple virtual routers
+
+Review:
+    *VLANs create seperate broadcast domains
+    *Connect the broadcast domains with physical routers
+    *Broadcst domains can be connected with virtual routers using InterVLAN routing.
+
+
+******************************************************************************************************************************************
+
+Interfacing with Managed Switches
+    Routers filter and forward based on layer 3 ip addresses, and switches use layer2 MAC addresses. Use a switch's ip address to 
+connect to it. The back of the switch has a console port which allows access to switch or router. Need a rollover or yost cable. DB-9
+on one side, and a connecter that looks like RJ-45. This connection is really slow. You can also connect via Ethernet Telnet with Putty.
+Cisco IOS is the operating system. Syntax: show st for startup file. You can log into switch via browser and set things like static ip 
+address or access control list, which allows certain people to access switch. The VLAN tab shows the port info. The Monitoring Tab shows
+which ports allow traffic out, and port mirroring or sniffing. SNMP or Simple Network Managment Protocol is a tool used on switches to 
+have an idea of their status by assigning an ip address and a community that assigned privileges. IGMP or Internet Group Management 
+Protocol is used for multicast trafficing like video conferncing. You can also set the bandwidth of each port. 
+
+Review:
+    *Managed switches require configuration
+    *Connect to a managed switch via an ip address or console port
+    *Cisco routers and switches use a proprietary IOS
+
+
+
+******************************************************************************************************************************************
+
+
