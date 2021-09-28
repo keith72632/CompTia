@@ -80,4 +80,58 @@ Review:
 
 ******************************************************************************************************************************************
 
+Switch Port Connection
+    Two types of ports, one connects to switches and the other connects to network cards. Spanning tree protocol or STP detects a bridge-
+loop. Switches will automatically negotiate a Root Bridge, and other switches will determine how far away they are for the root. A root-guard
+memorizes the MAC address for the Root. If you unplug a memorized a computer and put in a switch, this causes a security issue. BPDU guard
+or Bridge Protocol Data Units guard which establishes a port to only be used for a computer, not a switch. DHCP snooping is when you plug
+another DHCP server to a switch, and gets detected by the switch. This prevents Rogue dhcp server (a second DHCP server). 
+
+Review:
+    *Switch ports do not use IP addresses or work with layer 3
+    *Switch interconnections use STP to dtect looping by deactivating the port if necessary
+    *BPDU guard is a Cisco method allowing only non-switch devices to connect to the switch
+
+******************************************************************************************************************************************
+
+Port Bonding
+    To increase the bandwidth of trunk line, use port bonding. Two ports will act as one higher speed port. In Cisco IOS, configure ports
+into a group, then assign individual switch ports to group. interface port channel x, which is a group (channel = group). Then assign port
+numbers to group. Link Aggregation Control Protocol (LACP) determines wether port is active or passive. in ios, show int port-channel, and see
+two ports running at the sum of individual speeds. Port active always sends out LACD traffic, where as passive waits for input. Pull out 
+cable before disabling port.
+
+Review:
+    *Port bonding links switchports to increase bandwidth
+    *Use LACP for the trunking protocol
+    *Set ports to active
+
+
+******************************************************************************************************************************************
+
+Port Mirroring
+    Monitor data going in and out of port remotely. Configures switch to listen for data on certain point and send data to remote computer.
+In IOS, conf t to enter configuartion commands, and enter command: monitor session 1 source interface $(port). monitor session 1 destination 
+$(port number to send info to). Port mirroring allows remote monitoring of data on specific port. You can also configure to send all data to
+destination for rebviewing.
+
+Review:
+    *Port mirroring enables the traffic flowing through one port to be monitored on another port
+    *This feature enables administrators to remotely inspect traffic from a suspicios machine
+    *Port mirroring is configured on a switch by providing a source port and a destination port. 
+
+
+******************************************************************************************************************************************
+
+Quality of Service
+    Managing bandwidth. Traffic shaping means controlling traffic based on various parameters. Quality of Service is a metric of which we
+can Traffic shape. You can allocate how mush bandwidth or speed a particular service gets. Some systems shape traffic based on priorities.
+
+Review:
+    *Quality of service controls help better manage available bandwidth
+    *One type of QoS control is traffic shaping
+    *Simple QoS on SOHO routers allows priority setting for different protocols
+
+
+******************************************************************************************************************************************
 
