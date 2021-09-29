@@ -135,3 +135,51 @@ Review:
 
 ******************************************************************************************************************************************
 
+IDS vs IPS
+    First line of defense between internet and network is a firewall. Sometimes in router, other times an actual firewall device. Intrusion
+Detection System of IDS tends to be on inside of network and watches for malicious things on network. Active IDS is intrusion prevention, now
+refered to as IPS or Intrusion Prevention System, which stops malicious software. IPS is usually inbetween network and IDS. Some IDS have IPS
+features. 
+
+Review:
+    *Intrusion detection systems detect and report possible attacks to the administrator
+    *Intrusion prevention systems run in-line with networks and act to stop detected attacks
+    *A firewall filters, IDS notifies and IPS acts to stop
+
+******************************************************************************************************************************************
+
+Proxy Servers
+    Two kinds or proxy servers, Forward proxy servers and reverse proxy servers. Foward proxy client is aware of proxy, speaks to proxy, 
+forwards through firewall and then to internet. Forward proxy is a dedicated box or software. Provides caching, content filtering and
+firewalls. They can also takes adds out. Are application specific, like web or ftp. This can be set up in network settings. A Tranparent
+Proxy has to be inline to grab everything. ANother forward proxy is moved out into the internet and is connected to machine directly. People
+can use these proxies to avoid detection, like a VPN. These are websites like hide.me. TOR uses a huge network of computers to connect to to
+hide network traffic. 
+    A Reverse Proxy represents the server, not the client. Protects server from bad actors. Handles DDOS, load balancing, encryption 
+acceleration. 
+
+Review:
+    *Forward proxy servers hide the clients from the server by forwarding the message to the server
+    *Forward proxy servers can be configured for caching, content filtering and firewall capability
+    *Reverse proxy servers hide the server, and can provide load balancing and caching for high activity pages
+
+
+******************************************************************************************************************************************
+
+Load Balancing
+    To be able to have lots of servers giving out the same thing to minimize loads on servers. One type of load balancing is using a 
+DNS server. Create a lookupp zone in DNS called a Round Robin, where all websites are in this zone. DNS will also used whats called
+delegation, where another zone is setup with subzones for each website with reverse lookup zone where the zones will actually compete
+for resolution of DNS, which is great for finding fastest resolution. Server-side load balancing is at the location of the server which
+takes adavantage of clustering, which is a local network for the servers, so servers can all update at the same time. The load balancer
+can talk to each server individually to find which server is the least busy and will route traffic to server. Cloud based servers can
+have virtualized load balancer. 
+
+Review:
+    *Load balancing can be configured as client-side or server-side and provides high availability 
+    *Load balancing can route to the most available server either by a configured list (round robin) or by least response time
+    *Server-side load balancing uses a sophisticated hardware device that is located within the server
+
+
+******************************************************************************************************************************************
+
