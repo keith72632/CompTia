@@ -183,3 +183,24 @@ Review:
 
 ******************************************************************************************************************************************
 
+Device Placement Scenarios
+    A Demilitarized Zone or DMZ is a type of port forwaring to the internet that is completely exposed. A proper DMZ has a second 
+router attached to the first. First router -> switch -> server and another router -> wan of secondary router to switch, giving server
+it's own network id. This requires another ip from ISP for second router. Set up firewall on primary server to allow listening on secondary 
+network. Your safe network will be on the LAN of secodary router. 
+    IDS vs IPS or Intrusion Prevention System. In this case, inline IPS on cable coming from router before connecting to switch. 
+
+Firewalls
+    A few computers you don't want connected to your actual network. Put a firewall between network you don't want on network, and
+the actual network. Connect router to switch on lan, then switch to firewall, and network you want 'blocked' on the other side of
+firewall
+
+PProxy Server
+    Client connected to server. To obscure server from client, place firewall server-side, or reverse proxy. 
+
+Review:
+    *DMZs are used to protect public-facing servers by creating an isolated area for those devices
+    *Two firewalls are used in a DMZ: one allwoing unsolicited traffic to the public service,and the second maintaining isolation of
+    the private network
+    *Internal firewalls can be used to block specific access for areas that may need additional restrictions but, still function 
+    within the main domain

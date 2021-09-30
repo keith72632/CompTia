@@ -206,3 +206,36 @@ Section 11 Securing TCP/IP
 5) Which of the following is not a common certificate error warning?
     *CRL. Self-signed, expired and certificate not valid are all common error warnings
 
+*************************************************************************************************************************
+
+Section 13
+    1)Which would be the best solution to make an encrypted tunnel using ssh?
+    *Piggyback an existing tunnel program(like vpn) onto SSH
+    2)Which statement is true of VLANS?
+    *VLANs break up broadcast domains into multiple, smaller broadcast domains
+    3)Which statement is true of inter-VLAN routing?
+    *Inter-VLAN routing is implemented within switches to enable communication between VLANs
+    4)Which port on a switch is used to manage the switch?
+    *Console port
+    5)When operating multiple, duplicate servers such as web servers, which method is best to take advantage of the full power of all servers?
+    *Server Side Load Balancer
+    6)What is the cisco protocol to perfrom port bonding?
+    *LACP Link Aggregation Control Protocol
+    7)What does port mirroring accomplish?
+    *Enables inbound and outbound traffic from switch ports to be duplicated at the mirrored port
+    8)What does QoS (Quality of Service) provide?
+    *prioritzed throughput of different traffic types?
+    9)Which statement is true of IPS and IDS systems?
+    *IPS detects attemps to defend against a threat
+    10)Which statement is NOT true of a forward proxy?
+    *Forward proxy servers are connected in-line between the front-end router and the LAN and the do not require hosts to be configured
+    *TRUE:Forward proxies function between the local network and the front-end router, Forward proxies are application specific and
+    hosts must be configured to access the forward proxy server
+    11)Which is the best device to dole out requests to duplicate servers to ease congestion? 
+    *Server side load balancer. 
+    Review topics:
+        *Port mirroring
+
+
+*************************************************************************************************************************
+
