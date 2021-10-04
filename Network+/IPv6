@@ -35,3 +35,25 @@ Review:
 
 *******************************************************************************************************************************************
 
+IPv6 in action
+    EUI-64 addressing. When generating last half of ipv6 from mac address, there's a tracability to your machine. There are no public
+ip addresses with ipv6, so your pc can be tracked with the last half of ipv6, so a randomizer is used. Iv6 using neigher discovering protocol:
+First, all pc generates their own Link Local (starts with fe80). Then they beign Neighbor Solicitiation and Advertisiment, which is multicast protocol
+called ICMP v6, which only get picked up by machines with ipv6. Router sends mac and link local address asking if anyone is connected, then machines will
+anwer with Neighbor Advertisments. Neighbor Advertisments says who they are, mac address and link local. Then machines resolve mac addresses with ipv6
+addresses. The router is also a neighbor, which will respond to neighbor solicitaion. Internet addresses which start with 2000 something, will be 
+assigned. A router solicitation requires an ipv6, dns server etc. when routers hear this, they respond back with a router advertisment. Routers use 
+Statless Auto-configuration, which gives systems their ipv6, default gateway and their DNS information. When ipconfig or ifconfig, you will see a lot
+of ipv6 addresses, which comes from os spinning up different instances which are temporary and are for security. 
+    Internet connections will send router advertisiments to router, and those routers will used DHCP v6 which generate router prefixes. These prefixes
+come from ISP. 
+    Internal DNS servers with ipv6 can be complicated. You can run DHCP v6 which runs like DHCP, which can handle DNS while also propigating prefixes to downstream 
+routers. 
+
+Review:
+    *EUI=64 uses the mac address to generate a unique 64-bit ID to automatically configure a host address
+    *IPv6 uses router solicitation/advertisments to access Internet route information
+    *Appllications sometimes request temporary IP addresses; this is easily supported by IPv6 statelss auto configuration
+
+*******************************************************************************************************************************************
+
