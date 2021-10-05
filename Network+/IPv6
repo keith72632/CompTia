@@ -57,3 +57,15 @@ Review:
 
 *******************************************************************************************************************************************
 
+IPv4 and IPv6 Tunneling
+    ISPs don't pprovide ipv6, so you have to use tunneling. IPv6 data is encapsulated with ipv4 data. The endpoint strips away the ipv4
+data. In windows ipconifg, you'll see tunnel adapters, which allow transfering of data through ipv6. Teredo is popular, as is 6TO4. This 
+encasulates ipv6 in ipv4. GOGO Client is a program that connects you to ipv6 internet and creates a virtual ipv6 network card. There are
+websites to test your ipv6 internet. The challenge with ipv6 is that it looks the same.
+
+Review:
+    *If you are on IPv4 you need a tunneling protocol to get to the ipv6 internet
+    *Microsoft provides some tunnels like Toredo and 6t04
+    *Try the GOGO client from www.gogo6.com
+
+

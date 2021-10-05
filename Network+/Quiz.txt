@@ -239,3 +239,16 @@ Section 13
 
 *************************************************************************************************************************
 
+Section 14 Quiz
+    1)Which of the following is not a charactreristic of ipv6?
+    *FALSE: groups are seperated by dashes. TRUE: 128bits written in hexidecimals that are broken up into 8 groups
+    2)Which choice is not a valid representation of the IPv6 address: 2001:C2A:0000:0000:BB29:0000:3F00:A5B6?
+    *2001:C2A::BB29::3F00:A5B6. IPv6 cannot use more than one set of double colons to represent a string of zeros. 
+    2001:C2A:0000:0000:BB29:0000:3F00:A5B6 has dropped the leading zero in the second hextet-it's ok to drop leading zeros.
+    2000:0C2A:00000:0000:BB29::3F00:A5B6 has relaced a sting of four zeros in the 6th hextet with a double set of colons(::). 
+    it would be more efficent to replace the eight zeros in the third and fourth hextet with double colons (::) but any string 
+    can be replaced with (::).
+    3)Which statement is not true of ipv6 addresses?
+    *FALSE:IPv4 and Iv6 are automatically translated back and forth. WIndows and other operating systems randomize outbounf ipv6 traffic
+    to imporve privacy. EUI-64 addressing can be traced back to the source computer. All ipv6 addresses (except for link local addresses) are
+    global addresses, equivelnat to public ipv4 addresses
