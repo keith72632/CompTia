@@ -1,0 +1,50 @@
+Section 14 Remote Connectivity
+
+Telephony Technologies
+    Internet was built on log distance telephone system. All lines were connected to Central Office. Trunk lines connected these central
+offices, and would use Frequency Division Multiplexing to handle more than one call by shifting frequency. In 1970s, the US switched from
+analog to digital system. Digital pieces were being sent accross networks, each piece is 64Kbps. Trunk line switched to Time Division Multiplexing,
+which takes these 'chunks' into DS1 signal, which resolved frequency issues. These process runs at 1.5 Mbps. DS3 signal runs 28 DS1's simultaneously.
+Carrier    Channels    Speed
+T1         24           1.544 Mbps
+T3         672          44.736 Mbps
+E1         32           2.048 Mbps
+E3         512          34.368 Mbps
+    All of the T carriers are Point TO Point carriers. This is a good way to haul data as well. Each end of T1 line is CSU/DSU, and the
+cable looks like UTP cable. BERT (Bit Error Rate Testing) diagnoses problems with T1 lines. T1 Crossover is connecting two routers with 
+this to emulate T1 connection. 
+
+Review:
+    *Original Telephone systems used Frequency Division Multiplexing; today they use time division multiplexing
+    *E1 and E3 are European carriers
+
+************************************************************************************************************************************************
+
+Optical Carriers
+    Top of internet is all fiber optic and called SONET (Synchronous Optical Networking), uses OC lines. Slowest OC line is OC-1 and runs
+at 51.85 Mbps. OC-3 runs at three times the speed of OC-1. STS is the framing type of OC. SONET is starting to fade out to Gigabyte or
+10 Gygabit internet. SONET has come out with DWDM (Dense Wavelength Division Multiplexing), which uses multiple light colors for one piece of
+fiber for different connections. 
+
+Review:
+    *SONET
+        OC1=STS1 = 51.85 Mbps
+        OC3=STS3 = 155.52 Mbps
+        OC12 = STS12 = 622.08
+
+************************************************************************************************************************************************
+
+Packet Switching
+    Cirtuit switching analog signals travel from one netrwork to the next. Packet Switching has two technlogies, Frame Relay is quick and doesn't 
+care about errors, and ATM (Asychornous Transfer Mode) which is used on SONET lines. ATM is a "do it all" form of technology, and everything now is
+data. MPLS (Multiprotocol Lable Switching) is designed for ip based networks. Each ATM frame is 53 bytes long. MPLS doesn't care what kind of line it's
+being sent over. ALl os these packet switching technologies could fade away to ALl IP switching. In theroy, one day the interent will be all ip based. 
+
+Review:
+    *Know types of telephony packet switching
+    *Frame relay and ATM are being replaced with MPLS
+    *ATM is limited to small 53 byte frames, Ethernet frames are 1500 bytes
+
+************************************************************************************************************************************************
+
+
