@@ -47,4 +47,40 @@ Review:
 
 ************************************************************************************************************************************************
 
+Connecting with Dial-up
+    56Kbps. Piece of shit. Why am I learning this? Uses modem, either external or internal. You can still make dial up connections through most operating 
+systems. Enter telephone given by ISP, password and username. Point to Point protocol. Isn't even very good for backups.
+
+Review:
+    *Dial-up sucks
+    *requires modem
+    *ISP will give a username and password dial-up uses the PPP protocol. 
+
+************************************************************************************************************************************************
+
+Digital Subscriber Line (DSL)
+    Uses telephone lines. Been around since late 1980's. On same line as telephone, and plug in DSL modem, which has a RJ-11 (phone-line)
+jack, and an RJ-45 jack for the network. Two types of DSL, symmetric and asymmetric. The former has identical upload and download speeds,
+while the latter does not. Symmetric was faster. A DSL filter is used to filter DSL traffic from the telephone traffic. DSL is still used
+common with fiber companies. Very fast, called VDSL
+
+Review:
+    *DSL is either in symmetric or asymmetric mode, asymmetric is more common
+    *DSL filtering is used to clear the phone line of DSL noise
+
+
+************************************************************************************************************************************************
+
+Connecting with Cable Modems
+    Cable modem has RJ-45 and a Ftype screw in coax connection. Downside to cable is the providers don't like people to change their MAC addresses.
+Most routers have a way to "pretend" to be previous machine, as not to confuse the modem. 
+
+Review:
+    *Cable modems come from cable companies
+    *Cable rarely requires PPPoE
+    *Cable modems use F-tye connectors
+
+
+************************************************************************************************************************************************
+
 
