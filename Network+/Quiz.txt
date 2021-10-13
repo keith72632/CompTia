@@ -252,3 +252,28 @@ Section 14 Quiz
     *FALSE:IPv4 and Iv6 are automatically translated back and forth. WIndows and other operating systems randomize outbounf ipv6 traffic
     to imporve privacy. EUI-64 addressing can be traced back to the source computer. All ipv6 addresses (except for link local addresses) are
     global addresses, equivelnat to public ipv4 addresses
+
+*************************************************************************************************************************
+
+Scetion 15 Quiz
+    1)A DS0 line has what bandwidth?
+        *64Kbps
+    2)What is the speed on a OC-1 line?
+        *51.85 Mbps. Carries 24 times the capacity as DS-0 line
+    3)Which of the following is not a packet switching technology?
+        *Ciruit switch is not a packet switching technology. Frame relay, Asynchronous Transfer Mode and Multiprotocol Label Switching
+        are
+    4)Dial-up connection require which piece of equipment?
+        *modem
+    5)What kind of download and upload speed does ADSL provide?
+        *Slower upload speed than download speed
+    6)What is the primary disadvantage of Satellite internet?
+        *Latency
+    7)Remote desktop is a term that describes wwhat?
+        *Using a computer to take over the screen and keyboard of another computer
+    8) SCADA differs from ICS/DCS in what major reason?
+        *SCADA operates over long distances while ICS/DCS are local
+    What to review:
+        *What is the speed of an OC-1 line? lecture 107
+        *What kind of download speed does ADSL provide? lecture 110
+

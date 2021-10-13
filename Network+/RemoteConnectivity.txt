@@ -83,4 +83,53 @@ Review:
 
 ************************************************************************************************************************************************
 
+Connecting with Satellites
+    Modems have a distance limitation. Satellite isn't nearly as fast, and recetnlyt have become asynchronous. Satellites use a satellite
+modem, and always comes out with an RJ-45. Satellite latency is pretty high, which results in lower speeds
+
+Review:
+    *Satellite modems enable connecting to the internet through a satellite
+    *Satelite connections have terrible latency
+    *Run an RG-6 cable from dish to modem
+
+************************************************************************************************************************************************
+
+ISDN and BPL
+    Integrated Service Digital Network is an old way of making last line dial up connections, has telephone number assocaited with it. Runs at 128k and precedes
+dial-up networking. Uses terminal adapter for phones to plug into. Broadband over Powerline, which uses powerlines for internet. Lots of interference when transfering 
+data
+
+Review:
+    *ISDN ran at two speeds: 64 Kbps and 128 Kbps
+    *ISDN has a telephone number
+    *BPL uses powerline to move internet data
+
+************************************************************************************************************************************************
+
+Remote Desktop Connectivity
+    Can't transfer files, just monitor computer remotely. ISA is provided over a network to facilitate these things. TightVNC (Port 5900) is a 
+Remote Desktop software. Comes with viewer and service. Microsoft has a remote desktop tool too called RDP and runs on port 3389. When not using server, 
+use Remote Help. 
+
+Review:
+    *TightVNC runs on port 5900
+    *Microsoft RDP runs on port 3389
+    *Use remote help to control the desktop of the user you are assisting
+
+
+************************************************************************************************************************************************
+
+Advanced Remote Control Systems
+    Idustrial Control Systems (ICS) is the use of automation to control any type of system. Involves a connection between a machine and a controller or refered to 
+as an ICS server. Things like sensors will send data from machine to server. This is all eventually connected to an interface. DCS or Distributed Computer Systems is 
+an extension of ICS. This is a hierarchy of ICS systems connected to a central location, then connected to an interface. SCADA is a form of ICS, and is designed for long 
+distance systems. The ICS controllers have to be more autonomous. In SCADA the actual ICS server is a PLC, and the interface is an HMI. SCADA stands for Supervisor Control 
+and Data Acquisition System. RTU or Remote Terminal Units are essentially 'extensions' of the PLC, and sends data from remote locations to a central location
+
+Review:
+    *Industrial control systems control machines with sensors and actuators connected to an ICS server.
+    *Supervisory Control and Data Acquisition  (SCADA) systems handle ICS over a large area
+    *Key Pieces: programmbale logic controllers, human machine interfaces and remote terminal units
+
+
 
