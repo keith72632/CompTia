@@ -1,0 +1,70 @@
+***Wireless Networking***
+
+Introduction to 802.11
+    The is the quintessential standard for wireless networking. Uses radiowaves to tranfer network information. All wireless starts
+at a WAP, or Wireless Access Point. All WAPs have bridge that bridges into ethernet network. WAP is usually a router. Home routers will
+have usually have a WAP and switch these days. Service Set Identifier or SSID is a word or phrase that will be broadcast, and clients 
+will connect to them. Infastructure mode just means that you're using a wireless network. Ad hoc mode you can set up your own netork 
+on a computer, which acts as it's own network. With one WAP you will have a Basic Service Set Identifier (BSSID), but multiple WAPs 
+can work together. Plug multiple WAPs into switch, no configuration needed. This is called an Extended Service Set Identifier (ESSID).
+2 bands: 2.4/5.0 GHz. A band is a rnage of frequencies, divided up into "channels". 
+    NICs still connect to internet. Carrier Sense Multiple Access/Collision Avoidance or CSMA/CA doesn't send info to client unless 
+everything is clear. The actual transmission of the data itself comes in one of two forms, direct-sequence spread-spectrum (DSSS) is 
+the originally way or tranfering data, but now OFDM or Othogonal frequency-division mutliplexing is used.
+
+Review:
+    *A WAP is a bridging device that connects into Ethernet network and communicatres via radio waves to wireless client
+    *A WAP has an SSID (Service Set Identifier), a word or phrase used to connect wirelss devices to the WAP device
+    *CSMA/CA(carrier sense multiple access with collision avoidance) is the method used to prevent wirelss collisions
+
+******************************************************************************************************************************************
+
+802.11 Standards
+    Has extensions to keep up with progressing technology, signified with letters like C and G. 802.11B is arguably the first standard
+running at 11 Mbps on 2.4GHz band, with 14 different channels which are part of the 2.4GHz band. The channels overlap, which causes interference
+between channels, so there are really only 6 channels that don't overlap. 802.11A runs on 5.0GHz band at 54Mbps, and shorter range. 802.11a uses 
+OFDM. 802.11g runs on 2.4GHz band, which makes in backwards compatible with 802.11b and runs at 54Mbps. 802.11n came out as a way to increase 
+speed beyond 54Mbps and runs on both 2.4Ghz and 5.0GHz band. It can run between 108-300 GHz. Intorduced MIMO, which allowed multiple channels
+to talk to multiple machines. One challenge with this is it had a different type of packet it sent out. Greenfield mode = all n devices on 
+network. 802.11ac is one of the newer versions, 5.0GHz band and runs at 1Gbps. The more channels you add, the higher the speeds you get. Builds
+on the MIMO concept with MU-MIMO, which means no matter how many users you add, you can still provide MIMO to multiple users. Questions on test 
+involve moving to different versions to increase speed
+
+Review:
+    *Early wirelss standards were 802.11b(2.4 - 5.0 GHz) and 802.11a (5.0GHz)
+    *First widely-used standards was 802.11g(2.4GHz)
+    *Current standards are 802.11n and 802.11ac
+
+******************************************************************************************************************************************
+
+Power over Ethernet (PoE)
+    Network devices can be powered through the ethernet if switch is PoE capable. PoE ports will be labeled, usually with colors. PoE injectors
+allow for PoE if switches don't provide PoE. Original PoE standard is PoE+ 802.3af, which is 15.4 watts, which isn't enough power for newer WAPs.
+PoE+ 802.3at standard produces 30 watts. 
+
+Review:
+    *A PoE WAP needs to use a PoE switch or PoE injector but does not need a directly connected 110 plug
+    *PoE uses 802.3af originally, but has been replaced with PoE+ using the 802.3at standard that supports the newer WAPs supporting
+    up to 30 Watts.
+
+    
+******************************************************************************************************************************************
+
+Antennas
+    802.11 is radiowaves. Radio isn't covered by Comptia. An Omni antenna doesn't exist in Comptia world, and is a metal antenna which radiates
+energy in all directions. Comptia uses this term incorrectly. Dipole antennas have two simialr length antennas going in opposite direction, which 
+gives out a donut-shaped radiation pattern. Patch atennas have a half-sphere radiation pattern, so as not to radiate energy behind it. Antennas of all
+kinds can be mounted on inside. Directional or Yagi antenna are extemely directional, and has a football shaped broadcast. Great for inter-connecting
+two buildings. Parabolics are also directional and are stronger than Yagis. Look like a satellite dish. SMA connector or Subminature Version A Connector
+is the most common antenna connector. This allows antennas to be swapped between devices. You can increase the size of radiation by increasing the gain
+of antenna, measured in decimals. 
+
+Review:
+    *Different types of antennas have different radiation patterns and can be placed to provide a radiation pattern to meet wireless requirments
+    *Patch antennas are reguarly used on exterior walls
+    *Antenna placement and the gain should be considered when selecting antenna types, locations, and security boundraries.
+
+******************************************************************************************************************************************
+
+
+
