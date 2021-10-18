@@ -131,5 +131,39 @@ Review:
     *Supervisory Control and Data Acquisition  (SCADA) systems handle ICS over a large area
     *Key Pieces: programmbale logic controllers, human machine interfaces and remote terminal units
 
+************************************************************************************************************************************************
+
+Wireless Security Standards
+    802.11 authentication defines how to connect to WAP using a passphrase. Open/shared systems don't require passwords. Wired Equivalent Privacy
+or WEP uses passphrase for logging in and encryption. WEP Encryption stayed while WEP authentication didn't. The problem with WEP uses streamign protocal
+called RC4, which sends the same data over and over again, and was easily cracked. 802.11i fixed problems with WEP, but took forever to release, so WPA was 
+release with TKIP or Temporal Key Integrity Protocol, which scrambled the intialization vector of WEP. RC4 was switched out for AES encryption, which is a 
+block cypher called CCMP-AES or Counter Mode Cipher Block Chaining Messaging Authenticaton Code Protocol Counter Mode CBC-Mac Protocol used by WPA2-AES. WPA+TKIP,
+WPA2+CCAP. 
+    In router config gui, you can configure router for specific standard along with key value. WEP initialization was 24 bits, which leaves a relativily short key. 
+10% of all encrypted networks use WEP. WEP options in config gui has auto, open or shared key. Never use shared key because the key value is transfered in the clear. 
+Key type option is eith 64 or 128 bit, ehich the initialization size (24 bits) is subtracted from. 
+    When configuring WPA/WPA2, you decide which is the verison settings, where you can choose WPA-PSK or WPA2-PSK, and you have to actually know the password to log
+on. While WPA uses TKIP and WPA2 uses AES by default, routers will often make you specify which encryption to use. Leave as auto for it to auto configure. Passphrase or 
+password is the encryption key passed around. WPA/WPA2 Enterprise has an option for RADIUS server IP, Port and password. 
+    Remember, WEP is 24 bit key, WPA uses TKIP, WPA2 is current as uses AES, but is crackable if password is short. 
+Review:
+    *802.11 standards are used on both SOHO routers and enterprise routers
+    *802.11i was slow to release, so WPA was created using TKIP encryption protocol
+    *WPA2 uses CCMP-AES as the encryption protocol and is more secure
+
+************************************************************************************************************************************************
+
+Implementing Wireless Security
+    Using WPA2 isn't enough to be truly secure. In WAP configuration, SSID visibilty can be disabled, which turns of SSID broadcast. This requires you to 
+manually configure all of your clients. In Filters, Wireless MAC ACL is a control list based on MAC address, which limits people based on their MAC addresses.
+WAPs can have multiple SSIDs, where only certain people can get on certain networks, while having a "guest" SSID. WAP with a DHCP server can be configured to only
+have a certain amount of devices on network. Always change user id and password. Remote managment allows you to access configuration screen from wireless network. 
+Client isolation means everyone can connect to with SSID, but nobody can see each other. 
+
+Review:
+    *Disable SSID broadcast
+    *Use MAC filtering
+    *Limit the number of DHCP-issues addresses
 
 
