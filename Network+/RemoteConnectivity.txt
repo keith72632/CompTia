@@ -166,4 +166,56 @@ Review:
     *Use MAC filtering
     *Limit the number of DHCP-issues addresses
 
+************************************************************************************************************************************************
+
+Implementing Wireless Security
+    Plugging in a router to a wired network gives people access to wired network, which is called Rogue access point. You can find this by looking for another SSID. If you give this
+router the same SSID as actual network, then this is an evil twin and can mess up DHCP server. An 802.11 jammer can be configured to jam signals on entier 2.4 or 5.0 channel. You can find
+which channel the SSID is on. When this signal on channel is jammed, the traffic is rerouted to another channel established by hacker. The hacker can then monitor traffic through 
+wireshark. Jammers aren't needed when using a dauthentication attack. Programs like aricrack can see all clients that are authenticated on specific WAP, then use that info to send 
+out deauth commands, which tells clients to get of wireless network, and then connect to us. 
+
+Review:
+    *Rogue access points can be accidental, but evil twins are intentional
+    *Illegal 802.11 jammers can knock everyone off of a network
+    *Rogue access points an devil twins can cause headaches
+
+************************************************************************************************************************************************
+
+Retro Threats
+    Wardriving and Warchalk is the act of driving around with an antenna looking for 802.11 wireless networks. War Chalking uses strandardized symbols, which represent nodes, wether open
+closed and Wep (There was no WPA at this time), and then marking with chalk outside on pavment the SSID and node type. 
+
+Review:
+    *War driving is the act of dribing around and mapping the location and state of wireless access points
+    *War chalking is drawing a symbol on the sidewalk indicating the current state of a present WAP
+    
+
+************************************************************************************************************************************************
+
+WIFI Protected Set-ups
+    WPS or Wifi protected Setup takes WAP with a button when pressed along with button on machine, they sync together. Uses an 8 digit code passed between devices as
+authentication. The problem with this is the process to get this 8 digit code to work is it checks the 4 digit code first, which is easily hackable. Most devices cannot 
+have WPS turned off. 
+
+Review:
+    *WPS enables one-button setup of wirelss devices
+    *All modern wirelss devices are WPS enables
+    *WPS can be a security threat 
+
+************************************************************************************************************************************************
+
+Enterprise Wireless
+    SOHO devices has there own inidiviual web pages. Routers that don't have web interfaces use a Wireless Controller, where one setting (like ssid) is set up and propogated
+to all routers on network. There are interfaces where you can configure all WAPs, like Ubiquity. It has a dashboard that shows network diagnostics along with a map for devices
+building. 
+
+Review:
+    *Enterprise wirelss systems have multiple WAPs that can all have the same wirelss controller for configuation setup
+    *The Wireless controller can monitor traffic, set up various zones or access areas, and define services' access to specific WAP destinations
+    *The 802.11 standards are used on both SOHO routers and enterprise routers
+
+************************************************************************************************************************************************
+
+
 
