@@ -277,3 +277,28 @@ Scetion 15 Quiz
         *What is the speed of an OC-1 line? lecture 107
         *What kind of download speed does ADSL provide? lecture 110
 
+*************************************************************************************************************************
+ Section 16 Quiz
+    1) What does ad-hoc mode describe?
+    *wireless network comprised only of peer computers
+    2)PoE describes what?
+    *Using ethernet cables to carry data and power to network devices
+    3)Which of the following is not an antenna type typically found in a Wifi-environment?
+    *Tripole. Dipole, patch and yagi are all antennas
+    4)Which of the following is not a security task that should be performed on new WAP?
+    *Enable backward compatibility. Changing the administrator account and password, enabling encryption and
+    disabling SSID broadcast should be done
+    5)Which term describes the process of scouting for WIFI networks that may be vulnerable?
+    *War Driving
+    6)Documenting a "find" after war driving is known as?
+    *War Chalking
+    7)WPS is used for what purpose?
+    *Wireless Protection Setup autromatically configures a wireless device to connect to a WAP
+    8)Which choice is not a step in planning and installing a wireless network?
+    *install patch antennas. Planning WAP locations, performing site survey and configuring WAP security are all part of the setup
+    9)Which is not a typical wifi problem?
+    *WPS failure. Interference, wrong WAP passowrd and WAP config change are all wifi problems
+
+*************************************************************************************************************************
+
+

@@ -251,4 +251,24 @@ like phone interfering with signal. You can either kill the interference or manu
     Can't log onto network you've previously used: The network authentication has been changed. Go to forget network and reconnect to 
 the network. 
 
+Review:
+    *Interference can disrupt or slow wireless connections
+    *SOurces of interference can include other WAPs, wireless mice and keyboards, and even microwaves
+    *Remove sources of interference or change the WAP's frequency to avoid interference
+
+More Scenarios
+
+Slow Wireless Network
+    Usually cause by over-capcity with not enough WAP's, or poor placement of WAP's. Jitter is a term that refers to WIFI data bouncing around 
+a facility. This can cause really choppy connections. 
+
+Antenna Problems
+    Broken into two categories; Wrong antenna type and wrong antenna placement. Patch, directional, yagi and dipole antennas should be used accordingly. Long
+antenna cables can cause a loss in gain. 
+
+Review:
+    Adding or updating access points with more robust 802/11 standard devices should be considered for slow wireless network
+    *Be aware of gain loss due to length of cable and keep cables nshort when possible
+    *ANtenna placement is a bit of an art; test and restest to ensure coverage
+
 
