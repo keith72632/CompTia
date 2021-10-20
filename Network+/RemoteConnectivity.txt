@@ -217,5 +217,38 @@ Review:
 
 ************************************************************************************************************************************************
 
+Installing Wireless Network
+    It's smart to have a floor plan when installing wireless network. Walls can prevent good connectivity, otherwise refered to as interferance.
+Large motors and hot enironments can cause interference too. Reflection can be caused by walls too, where the signal is bounced irratically around
+space. Refraction is the bending of a radio wave, and can actually be used to your benefit. Absorbtion can occur with concrete walls. Attenuation, 
+or the degredation of a signal over a long distance can be a problem in large spaces. A Site Survey is an audit of a facility to determine where to 
+where to put WAPs. WIFI analyzers are tools that help with this by allowing the technician to walk around facility and measure the signal strength 
+of the wifi signal. WIFI analyzers will show the signal strength of both 2.4GHz and 5GHz bands. A Heat Map is a visual representation of the wifi 
+signal strength throughout the facility. 
+    Antenna placement is important when setting up a wireless network. Anytime you want to contain the signal and prevent it from reaching outside 
+the walls, a patch antenna, which emits a signal in one direction, would be preferable to an antenna the broadcasts a signal in all directions. It's
+important to try different locations for WAPs to find the best placement for the optimal signal. A Dipol antenna can be placed in a centralized 
+location because of it's 360 degrees broadcast. Highly Directional Antennas(Yagis) broadcast a signal in one specific direction. These antennas work
+well when trasmitting a wifi signal to another structure. The Signal-to-noise ratio is a relative gauge of strength. While an antenna's stength is measure
+in gain, the actual signal the machines recieve is measured in Signal-to-noise ratio. A Wireless-range-extender is a self standing device that acts as a
+wireless repeater which acts as a bridge for one SSID and the client. Wireless Range Extenders are difficult to use and are not reliable. It's better to 
+just run a cable and add another WAP in remote locations that have trouble receiving a wifi broadcast. Mesh networks involve turning multiple WAPs into 
+Mesh WAPs that broadcast to each other to prevent dead spots. This allows the devices to talk through each other instead of trying to connect to a possibly
+unreachable WAP. 
+
+Review:
+    *Interferance, reflections and absorption are all environmental issues that can affect the wireless signal. 
+    *A WIFI signal is different on various devices; match radiation patterns and 802.11 specs to the signal requirment
+    *Pay attention to the bandwidths and use channels with the least amount of congestion.
+
+************************************************************************************************************************************************
+
+Wireless Scenarios
+    Interference: Wireless networks have established speeds, but can be affected by interference. Windows Resource Monitor can show the network speed
+at which the device is running. Biggest places to find interference are one; wireless access points interfering with the channel, or two; other devices 
+like phone interfering with signal. You can either kill the interference or manually set the channel of WAP.
+    New Network can't connect to internet: Check IP address for APIPA address. If this happens, it means you put your password in wrong. 
+    Can't log onto network you've previously used: The network authentication has been changed. Go to forget network and reconnect to 
+the network. 
 
 
