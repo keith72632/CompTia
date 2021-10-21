@@ -1,0 +1,30 @@
+***Virtualization and Cloud Computing***
+
+Virtualization Basics
+    Virtual machines are a popular type of virtualization. So are emulators. The most popular use of virtualiation
+is vm and hypervisors. Two types of hypervisors; type two which runs on top of OS, and type one which actually boots
+up the system.
+
+Review:
+    *Don't confuse virtualization with emulation
+    *Recognize the benefits of virtualization
+    *There are two types of hypervisors: Type 1 (bare metal) and Type 2 (hosted)
+
+********************************************************************************************************************
+
+Cloud Ownership
+    Private clouds vs Public clouds. Public clouds include Azure and AWS. Hybrid cloud is both; one big cloud that secures
+what it needs it private, then leases the rest out. Community clouds are cheaper, and consist of multiple buisnesses using 
+the same cloud. 
+
+Review:
+    *Private clouds allow access to memebers only
+    *Public clouds are available to anyone
+    *A private cloud with contracted managment is considered a hybrid cloud
+    *Four clouds to remember: public, private, community and hybrid
+
+
+
+********************************************************************************************************************
+
+
