@@ -27,4 +27,24 @@ Review:
 
 ********************************************************************************************************************
 
+Cloud Implementation
+    AWS or Amazon Web Services; setup a server, router and firewall setup automatically within virtualized Personal cloud, which
+connects to the "Big Internet". Within this cloud, there is security and public IP.
+
+AWS VPC Steps:
+    1)Find VPC in features and start VPC Wizard
+    2) Give VPC a name and add Endpoint and Create VPC
+    3)Click on Your VPC and launch VPC
+    4)Close WIndow and find VPC under Your VPCs
+Elastic Beanstalk Steps:
+    1)Search for Beanstalk
+    2)Create app name and choose platform and click Create Application
+
+Review:
+    *VPC (Vitrual Private Cloud) depends on the services requested, including IaaS (Infastrucutre as a Service) and
+    PaaS(Platform as a Servic)
+    *VPC services are very flexible, expandable, and can provide many types of services
+    *Building Web servers on cloud applications is very easy, but there can be costs associated with the services
+
+********************************************************************************************************************
 
