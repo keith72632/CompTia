@@ -48,3 +48,31 @@ Review:
 
 ********************************************************************************************************************
 
+First Virtual Machine
+    Host based hypervisor: Vmware and Microsoft, Oracle virtualbox. New machines require an OS image, go to storage 
+options, choose disk file.In settings->* you can adjust memory settings, virtualize sound and usb, etc. VMs need tools
+installed afterwards. You can "snapshot" a machine to save the machine state as it is at the time taken. There are premade
+virtual machines, like a windows firewall. 
+
+Review:
+    *Virtual machines need an operating system
+    *Snapshots store the currrent status of the virtual machine
+    *Most virtual hardware can be changed
+
+********************************************************************************************************************
+
+NAS and SAN
+    General file storage. Network Attached Stored (NAS) and Storage Area Networking (SAN). Both are designed to store 
+data. These are dedicated systems that only store data, with RAID arrays and backup technology. Network Attached Storage 
+is a file based sharing protocol, with RAID drives inside with it's own operating system (usually linux). NAS runs over
+regular network with it's own protocols. FreeNAS is a popular software for this. Consists of pools with volumes, and use
+compression software to store more than the physical memory allows. You then configure a "share" which is a file on the 
+NAS that is shared through network. To access these shares from client, go to File Explorer->Network->Computer and click
+NAS box. NAS tool can create admissions. While Network Attached Storage systems are convenient, sometimes a Storage Area
+Network is required. SANs rely on some technology to transfer data and run at the block-level. The best SAN's ran on 
+Fiber Channel which require a Host Bus Adapter (HBA) which looks like a fiber network card. Very expensive but very 
+powerful. Run at multiple gigabit speeds, up to 128 Gbps. There are now Fiber over Ethernet technology so these expensive
+network cards aren't needed. An iSCSI uses existing network and works at block level. This can be configured in FreeNAS 
+also. Create a SAN volume, and make it a Target, and on windows system use iSCSI initiator, and will make this into a 
+hardrive for this machine. 
+
