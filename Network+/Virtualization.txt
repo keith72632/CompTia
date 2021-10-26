@@ -74,5 +74,58 @@ Fiber Channel which require a Host Bus Adapter (HBA) which looks like a fiber ne
 powerful. Run at multiple gigabit speeds, up to 128 Gbps. There are now Fiber over Ethernet technology so these expensive
 network cards aren't needed. An iSCSI uses existing network and works at block level. This can be configured in FreeNAS 
 also. Create a SAN volume, and make it a Target, and on windows system use iSCSI initiator, and will make this into a 
-hardrive for this machine. 
+hardrive for this machine. In Disk Manager you can see another hard drive. For the exam, NAS is file level, while SAN 
+run at the block level with fiber channel or iSCSI where they have their own hardrive.
+
+Review:
+    *NAS is file level
+    *SAN is block level
+    *SANs will use either Fiber Channel of iSCSI
+
+********************************************************************************************************************
+
+Platform as a Service (PaaS)
+    A pre-configured platform for developers. Lets things like servers and firewalls be established automatically. Heroku
+is an example of this. For example, you have a node.js hello world program, create a new app in heroku. Add a heroku command
+line tool, and create app with cli. This will display the site name along with a git url. git push heroku master. Heroku open
+will open up a browser and let you see your webpage live. In heroku client, you can add on other features like a sql server. 
+
+Review:
+    *PaaS enables access to a software development platform without the need to personally host it
+    *Heroku is a great example of PaaS
+    *A PaaS allows very quick access to software running live on the internet
+
+********************************************************************************************************************
+
+Software as a Service (SaaS)
+    Instead of having a cd to install software, you buy a subscription. This gets rid of optical media. Microsoft Office 365
+is an example of this. Pay a subsription to use these services on any computer. Dropbox is a Saas as it is subscription based
+while not actually downloading onto your pc. 
+
+Review:
+    *SaaS enables access to applications via subscription
+    *Microsoft office 365 is a great example of SaaS
+    *Other SaaS examples include Dropbox and Google Docs
+
+
+********************************************************************************************************************
+
+Infastructure as a Service (IaaS)
+    Physical hardware being replaced by digital machines, like physical servers replaced by virtual machines on a cloud.
+AWS is an example of this, providing vitrual machines, Virtual Private Clouds, etc. 
+
+Steps to creating server instance with AWS
+    1)In EC2 launch new instance
+    2)Pick operating system (free tier)
+    3)Configure instance. Here you will see network id and subnet mask
+    4)Add storage. Pick delete on termination option
+    5)Add tag instance as a way to id instances
+    6)Security. Pick protocol and source. 
+    7)Connect to system via prefered source (like Remote Desktop)
+
+Review:
+    *
+
+
+
 
