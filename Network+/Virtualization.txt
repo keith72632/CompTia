@@ -124,8 +124,9 @@ Steps to creating server instance with AWS
     7)Connect to system via prefered source (like Remote Desktop)
 
 Review:
-    *
-
+    *IaaS enables quick configuration of network resources hosted by someone else
+    *Amazon Web services (AWS) is a great example of IaaS
+    *AWS, like most IaaS providers, only charges for the time a server is acturally running
 
 
 

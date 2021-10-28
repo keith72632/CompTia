@@ -301,4 +301,21 @@ Scetion 15 Quiz
 
 *************************************************************************************************************************
 
-
+Section 17 Quiz
+    1)Which statment is true about emulation?
+    *Emulation uses software to act like hardware that does not actuall exist within the host computer
+    2)Which element does not need to be configured when installing a virtual machine on a host?
+    *The input voltage. The number of CPU cores, type and size of storage and amount of RAM all need to be configured
+    3)Which statement is not true of network storage?
+    *A SAN hosts files that are shared using protocols such as SAMBA and Apple File Share. True: Nas is file based storage,
+    SAN is block level storage and NAS is single box solution
+    4)WHich cloud model provides a software development environment?
+    *Paas Platform as a Service
+    5)Which cloud model provides a method for keep software up to date?
+    *SaaS Software a a Service provides services to applications and OS so that subscriobers will always habe current code. 
+    Can also host web-based apps that were histiorically server and client based, such as webmail
+    6)Which cloud model provides a virtualized hardware environment that includes elements such as servers, switches, routers and load balancers?
+    *IaaS Infastructure as a Service 
+    What to study:
+        *Emulation
+        *Network storage with NAS and SAN
