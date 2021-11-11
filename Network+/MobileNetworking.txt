@@ -1,0 +1,29 @@
+***Mobile Networking***
+
+Cellular Technology
+    When it comes to internet connectivity, there are only two choices; cellular WANs and WiMAX. WiMAX is an extension of WIFI 802.11 standard, specifically the 
+802.16 standard. Range of about 17 miles, and can be installed on existing cell phone towers. Runs quickly, but is suseptable to environmental hazards. These are 
+essentially "hot spot" modules. They propogate a signal based of cell towers, and even have RJ-45 connectors. Cellular WANs are tricky, becuase cell phones were 
+initially designed to only transfer voice, not data. Over the years, data carrying standards have been made, 1G, 2G, 3G, etc. G stands for generation. On Comptia,
+two types of data transfer technologies: HSPA, which runs in single Mbps range, and HSPA+ which runs faster and is considerd 4G technologies. LTE runs in the 10s
+of Mbps range. Tethering is using the signal from a cell phone to create a network by sharing it's signal with other devices (hot spot). 
+
+Review:
+    *WiMAX is the 802.16 standard
+    *Cell phones are on many standards known as "G" terms
+    *HSPA/HSPA+ and LTE
+
+********************************************************************************************************************************************************************
+
+Mobile Connectivity
+    Cell phones have a multitude of way to connect with devices. 
+    *The first is Z-wave, are home automation technologies. Connect to home appliances, air conditioning
+        etc. Channel = 900 MHz band, Range=30 meters, speed=9600bps.
+    *ANT/ANT+ are almost exclusivley for health devices, like heart rate monitors. Channel=2.4GHz, range=30 meters, speed=20kbps
+    *Bluetooth channel=2.4GHz, range=100 meters, speed=3mbps
+    *Near Field Communication or NFC, is close range Communication. Touch devices together to transfer data. Channel=13.56 MHz, range=4cm, speed=424Kbps
+    *Radio-Frequency Identification (RFID) involves a passive device uses radio power from another device to turn on and send tiny amounts of info to recieving device
+        Channel=20khz to 10 GHz, range=10 cm to 200 meters, speeds=fast
+    *Infared uses light, with a short range (1 meter or so) with speeds of 1 Gbps, and needs line of sight. 
+
+********************************************************************************************************************************************************************
