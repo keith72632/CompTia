@@ -27,3 +27,17 @@ Mobile Connectivity
     *Infared uses light, with a short range (1 meter or so) with speeds of 1 Gbps, and needs line of sight. 
 
 ********************************************************************************************************************************************************************
+
+Deploying Mobile Devices
+    Mobile device managment tools allow you to control a group of mobile devices on a mass level, like excluding certain apps, turning of cameras, etc. Two types of mobile
+deplyment options, first is Corporate Owned Buisness Only(COBO) is where the company owns and controls devices. Corporate Owned Personally Enables (COPE) is where everyone has 
+the same device, which makes control easier. Choose your own device (CYOD) is where users can select from list of approved devices. Bring Your Own Device (BYOD) users get to
+choose. 
+
+Review:
+    *Mobile devices are prolific and very useful in both personal and corporate envioronments
+    *Be familiar with the deployment models discussed and what the pros and cons are of each
+    *Consider mobile device managment for privacy & productivity. 
+
+********************************************************************************************************************************************************************
+
