@@ -41,3 +41,17 @@ Review:
 
 ********************************************************************************************************************************************************************
 
+Mobile Access Control
+    Network Access Control or NAC is the process by which networks allow mobile devices onto networks. On enterprise enviorments, a term called on-boarding is the process of
+which a decision is made to wether a device should be let on network. A Captive portal is a web page hosted on network to sign onto network. This is seen a lot in hotels. Some
+networks make you run an anti-malware program on device to determine if your device is safe to let on network. Geofencing decides wether a device can log onto network based on
+location. All of these tools are for enterprise. 
+    On home networks, other security precautions can be taken. Allowing access via MAC addresses is called MAC filtering. White listing is only allowing access if the devices 
+Mac address is on a list. Black listing is the oppositie, where prohibited devices are put on list. MAC filtering is very restrictive. 
+
+Review:
+    *Mobile access managment must consider hot to allow BYOD devices to access a network
+    *Mobile on-boarding is the process of making a network available to BYOD mobile devices; one standard is a captive portal sign-in page
+    *In a SOHO router, access control can be decided using whitelisted or blacklisted MAC addresses
+
+

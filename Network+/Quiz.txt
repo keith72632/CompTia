@@ -319,3 +319,16 @@ Section 17 Quiz
     What to study:
         *Emulation
         *Network storage with NAS and SAN
+
+*************************************************************************************************************************
+
+Section 17 Quiz
+    1)Which of the following is not a cellular data standarad?
+    *G-3. 2G-4G, HSPA and HSPA+ and LTE are data standars
+    2)WHich oof the follwoing is not a modible connectivity tech?
+    *RFDI. RFID, z-wave, ANT/ANT+ and NFC are
+    3)Which of the follwoing is not a mobile deployment option?
+    *COBO, COPE, and BYOD ARE
+    4)Which of the following is not an element that is exclusive to Mobile NAC?
+    *two-factor auth. On-boarding, captive portal and geofencing are
+
