@@ -1,0 +1,56 @@
+Building a Real Network
+
+Network Types
+*A Local Area Network or LAN consists of atleast one  switch with a one or more machines hooked to it via ethernet or wirelessly, as 
+long as it's all on the same broadcast domain.
+*A Wide Area Network or WAN consists of a collection of routers interconnected, like the internet for example. 
+*A Campus Area Network or CAN consists of multiple LANs interconnected, usually different buildings
+*A Metropolitan Area Network of MAN is kind of like a CAN, but bigger, usually on a city-wide scale
+*The Internet is a collection of MANs connected together
+*Intranet is a private network
+*Wireless Local Area Network or WLAN is a collection of wireless devices connected to a WAP.
+*A Personal Area Network or PAN consists of devices connected directly, like bluetooth devices
+
+Review:
+    *Geographical networks: LAN, WAN, CAN, MAN, Internet
+    *Wireless: WLAN and PAN
+
+
+******************************************************************************************************************************************
+
+Network Design
+    Things to consider when designing a network include specific needs, company needs. Assess current networking infastructure. Security
+needs to be considered early on, and also power. Analyze existing documentation for network. With structured cabling, compatibility issues
+can arrive with CAT-5 cables. Voice over ip can be an issue with old cable. Compatibilty is also a concern on the operating system level too. 
+Old operating systems need to be worked around since they can't be shutdown. Wireless needs should be assessed, like guest wireless for 
+security needs (seperate SSIDs). When connecting to ISPs, most places still use hard connections, or VPNs. When considering ISPs, don't 
+have everything limited to one ISP. 
+
+Review:
+    *Network designs start with assessing customer needs
+    *design considerations include documnetation, compatibility with existing hardware and software
+    *Bring in security early and make sure to assess external connectivity
+
+******************************************************************************************************************************************
+
+Power Management
+    Uninteruptable Power Supply or UPS uses batteries as a buffer between ower and utilities. Network racks should have a UPS. These only run 
+for a little while, so if the need for continuous power arises, use power generator. Dual Power Supply prevent a single point of failure on network
+equipment by attaching two power supplies to machines, but are still connected to same circuit. Redundant ciruitry puts each power supply on different
+circuits incase of breaker failure
+
+Review:
+    *A UPS is a battery backup and should be used for short-term power loss
+    *Power Generators can be diesel or gas and are used to maintain power for when electric ower is not available
+    *Dual power supplies and redundant ciruitry are hardware power management and often used in critical systems
+
+******************************************************************************************************************************************
+
+Unified Communications
+    A PBX system is a phone system. Voice over IP is the new versions of continuous connections. Unified Connections is the new style. In the old days, 
+PBX was a box with phones connected to it, then the PBX connected to phoneline. VoIP is a box connected to the LAN switch, and the phones are connected to 
+phones. The VoIP is essentially a server either connected to phoneline or in the modern age, the internet. Some newer phones have screen that are similar to 
+a PC or a mobile phone. Video conferencing is one way VoIP, but realtime video is more complicated, because every client can send and received data. 
+Collaberative tools
+
+
